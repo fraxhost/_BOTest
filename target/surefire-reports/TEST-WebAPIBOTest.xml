@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="WebAPIBOTest" time="44.244" tests="10" errors="10" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\ahmed\IdeaProjects\BOTest-GUI\target\test-classes;C:\Users\ahmed\IdeaProjects\BOTest-GUI\target\classes;C:\Users\ahmed\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.0-M1\junit-jupiter-api-5.8.0-M1.jar;C:\Users\ahmed\.m2\repository\org\apiguardian\apiguardian-api\1.1.1\apiguardian-api-1.1.1.jar;C:\Users\ahmed\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\ahmed\.m2\repository\org\junit\platform\junit-platform-commons\1.8.0-M1\junit-platform-commons-1.8.0-M1.jar;C:\Users\ahmed\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.0-M1\junit-jupiter-engine-5.8.0-M1.jar;C:\Users\ahmed\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib-jdk8\1.4.20\kotlin-stdlib-jdk8-1.4.20.jar;C:\Users\ahmed\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib\1.4.20\kotlin-stdlib-1.4.20.jar;C:\Users\ahmed\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib-common\1.4.20\kotlin-stdlib-common-1.4.20.jar;C:\Users\ahmed\.m2\repository\org\jetbrains\annotations\13.0\annotations-13.0.jar;C:\Users\ahmed\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib-jdk7\1.4.20\kotlin-stdlib-jdk7-1.4.20.jar;C:\Users\ahmed\.m2\repository\org\junit\platform\junit-platform-engine\1.8.0-M1\junit-platform-engine-1.8.0-M1.jar;C:\Users\ahmed\.m2\repository\org\junit\platform\junit-platform-launcher\1.8.0-M1\junit-platform-launcher-1.8.0-M1.jar;C:\Users\ahmed\.m2\repository\org\junit\platform\junit-platform-runner\1.8.0-M1\junit-platform-runner-1.8.0-M1.jar;C:\Users\ahmed\.m2\repository\org\junit\platform\junit-platform-suite-api\1.8.0-M1\junit-platform-suite-api-1.8.0-M1.jar;C:\Users\ahmed\.m2\repository\org\junit\platform\junit-platform-suite-commons\1.8.0-M1\junit-platform-suite-commons-1.8.0-M1.jar;C:\Users\ahmed\.m2\repository\io\qameta\allure\allure-junit5\2.14.0\allure-junit5-2.14.0.jar;C:\Users\ahmed\.m2\repository\io\qameta\allure\allure-junit-platform\2.14.0\allure-junit-platform-2.14.0.jar;C:\Users\ahmed\.m2\repository\io\qameta\allure\allure-java-commons\2.14.0\allure-java-commons-2.14.0.jar;C:\Users\ahmed\.m2\repository\io\qameta\allure\allure-model\2.14.0\allure-model-2.14.0.jar;C:\Users\ahmed\.m2\repository\org\apache\tika\tika-core\1.26\tika-core-1.26.jar;C:\Users\ahmed\.m2\repository\javax\xml\bind\jaxb-api\2.3.1\jaxb-api-2.3.1.jar;C:\Users\ahmed\.m2\repository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;C:\Users\ahmed\.m2\repository\javax\activation\activation\1.1.1\activation-1.1.1.jar;C:\Users\ahmed\.m2\repository\org\jooq\joor-java-8\0.9.14\joor-java-8-0.9.14.jar;C:\Users\ahmed\.m2\repository\io\qameta\allure\allure-test-filter\2.14.0\allure-test-filter-2.14.0.jar;C:\Users\ahmed\.m2\repository\org\openjfx\javafx-controls\11\javafx-controls-11.jar;C:\Users\ahmed\.m2\repository\org\openjfx\javafx-controls\11\javafx-controls-11-win.jar;C:\Users\ahmed\.m2\repository\org\openjfx\javafx-graphics\11\javafx-graphics-11.jar;C:\Users\ahmed\.m2\repository\org\openjfx\javafx-graphics\11\javafx-graphics-11-win.jar;C:\Users\ahmed\.m2\repository\org\openjfx\javafx-base\11\javafx-base-11.jar;C:\Users\ahmed\.m2\repository\org\openjfx\javafx-base\11\javafx-base-11-win.jar;C:\Users\ahmed\.m2\repository\commons-cli\commons-cli\1.4\commons-cli-1.4.jar;C:\Users\ahmed\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\ahmed\.m2\repository\org\apache\commons\commons-compress\1.20\commons-compress-1.20.jar;C:\Users\ahmed\.m2\repository\org\apache\commons\commons-csv\1.8\commons-csv-1.8.jar;C:\Users\ahmed\.m2\repository\commons-io\commons-io\2.7\commons-io-2.7.jar;C:\Users\ahmed\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\ahmed\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\ahmed\.m2\repository\org\apache\commons\commons-math3\3.6.1\commons-math3-3.6.1.jar;C:\Users\ahmed\.m2\repository\org\apache\commons\commons-text\1.8\commons-text-1.8.jar;C:\Users\ahmed\.m2\repository\com\sun\xml\fastinfoset\FastInfoset\1.2.16\FastInfoset-1.2.16.jar;C:\Users\ahmed\.m2\repository\org\apache\groovy\groovy\4.0.1\groovy-4.0.1.jar;C:\Users\ahmed\.m2\repository\org\apache\groovy\groovy-xml\4.0.1\groovy-xml-4.0.1.jar;C:\Users\ahmed\.m2\repository\org\hamcrest\hamcrest\2.1\hamcrest-2.1.jar;C:\Users\ahmed\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\ahmed\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\ahmed\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\ahmed\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\ahmed\.m2\repository\com\sun\istack\istack-commons-runtime\3.0.8\istack-commons-runtime-3.0.8.jar;C:\Users\ahmed\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.12.1\jackson-annotations-2.12.1.jar;C:\Users\ahmed\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.11.4\jackson-core-2.11.4.jar;C:\Users\ahmed\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.11.4\jackson-databind-2.11.4.jar;C:\Users\ahmed\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-yaml\2.11.4\jackson-dataformat-yaml-2.11.4.jar;C:\Users\ahmed\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.12.2\jackson-datatype-jdk8-2.12.2.jar;C:\Users\ahmed\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.11.4\jackson-datatype-jsr310-2.11.4.jar;C:\Users\ahmed\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.0\jakarta.activation-api-2.1.0.jar;C:\Users\ahmed\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.0\jakarta.xml.bind-api-4.0.0.jar;C:\Users\ahmed\.m2\repository\com\sun\xml\bind\jaxb-impl\2.3.0\jaxb-impl-2.3.0.jar;C:\Users\ahmed\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar;C:\Users\ahmed\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.30\jcl-over-slf4j-1.7.30.jar;C:\Users\ahmed\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\ahmed\.m2\repository\org\webjars\jquery\3.6.0\jquery-3.6.0.jar;C:\Users\ahmed\.m2\repository\io\rest-assured\json-path\5.1.1\json-path-5.1.1.jar;C:\Users\ahmed\.m2\repository\org\apache\groovy\groovy-json\4.0.1\groovy-json-4.0.1.jar;C:\Users\ahmed\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\ahmed\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\ahmed\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;C:\Users\ahmed\.m2\repository\org\apache\logging\log4j\log4j-api\2.17.1\log4j-api-2.17.1.jar;C:\Users\ahmed\.m2\repository\org\apache\logging\log4j\log4j-core\2.17.1\log4j-core-2.17.1.jar;C:\Users\ahmed\.m2\repository\org\apache\logging\log4j\log4j-iostreams\2.13.3\log4j-iostreams-2.13.3.jar;C:\Users\ahmed\.m2\repository\io\rest-assured\rest-assured\5.1.1\rest-assured-5.1.1.jar;C:\Users\ahmed\.m2\repository\io\rest-assured\rest-assured-common\5.1.1\rest-assured-common-5.1.1.jar;C:\Users\ahmed\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\ahmed\.m2\repository\org\slf4j\slf4j-ext\1.7.28\slf4j-ext-1.7.28.jar;C:\Users\ahmed\.m2\repository\org\slf4j\slf4j-log4j12\1.7.28\slf4j-log4j12-1.7.28.jar;C:\Users\ahmed\.m2\repository\org\yaml\snakeyaml\1.26\snakeyaml-1.26.jar;C:\Users\ahmed\.m2\repository\org\jvnet\staxex\stax-ex\1.8.1\stax-ex-1.8.1.jar;C:\Users\ahmed\.m2\repository\io\swagger\swagger-annotations\1.6.2\swagger-annotations-1.6.2.jar;C:\Users\ahmed\.m2\repository\io\swagger\core\v3\swagger-core\2.1.10\swagger-core-2.1.10.jar;C:\Users\ahmed\.m2\repository\io\swagger\core\v3\swagger-annotations\2.1.10\swagger-annotations-2.1.10.jar;C:\Users\ahmed\.m2\repository\jakarta\validation\jakarta.validation-api\2.0.2\jakarta.validation-api-2.0.2.jar;C:\Users\ahmed\.m2\repository\io\swagger\swagger-compat-spec-parser\1.0.54\swagger-compat-spec-parser-1.0.54.jar;C:\Users\ahmed\.m2\repository\com\github\java-json-tools\json-schema-validator\2.2.14\json-schema-validator-2.2.14.jar;C:\Users\ahmed\.m2\repository\com\github\java-json-tools\jackson-coreutils-equivalence\1.0\jackson-coreutils-equivalence-1.0.jar;C:\Users\ahmed\.m2\repository\com\github\java-json-tools\json-schema-core\1.2.14\json-schema-core-1.2.14.jar;C:\Users\ahmed\.m2\repository\com\github\java-json-tools\uri-template\0.10\uri-template-0.10.jar;C:\Users\ahmed\.m2\repository\org\mozilla\rhino\1.7.7.2\rhino-1.7.7.2.jar;C:\Users\ahmed\.m2\repository\com\sun\mail\mailapi\1.6.2\mailapi-1.6.2.jar;C:\Users\ahmed\.m2\repository\joda-time\joda-time\2.10.5\joda-time-2.10.5.jar;C:\Users\ahmed\.m2\repository\com\googlecode\libphonenumber\libphonenumber\8.11.1\libphonenumber-8.11.1.jar;C:\Users\ahmed\.m2\repository\net\sf\jopt-simple\jopt-simple\5.0.4\jopt-simple-5.0.4.jar;C:\Users\ahmed\.m2\repository\com\github\java-json-tools\json-patch\1.13\json-patch-1.13.jar;C:\Users\ahmed\.m2\repository\com\github\java-json-tools\msg-simple\1.2\msg-simple-1.2.jar;C:\Users\ahmed\.m2\repository\com\github\java-json-tools\btf\1.3\btf-1.3.jar;C:\Users\ahmed\.m2\repository\com\github\java-json-tools\jackson-coreutils\2.0\jackson-coreutils-2.0.jar;C:\Users\ahmed\.m2\repository\io\swagger\swagger-core\1.6.2\swagger-core-1.6.2.jar;C:\Users\ahmed\.m2\repository\com\google\guava\guava\27.0.1-android\guava-27.0.1-android.jar;C:\Users\ahmed\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\ahmed\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\ahmed\.m2\repository\org\checkerframework\checker-compat-qual\2.5.2\checker-compat-qual-2.5.2.jar;C:\Users\ahmed\.m2\repository\com\google\errorprone\error_prone_annotations\2.2.0\error_prone_annotations-2.2.0.jar;C:\Users\ahmed\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\ahmed\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.17\animal-sniffer-annotations-1.17.jar;C:\Users\ahmed\.m2\repository\javax\validation\validation-api\1.1.0.Final\validation-api-1.1.0.Final.jar;C:\Users\ahmed\.m2\repository\io\swagger\swagger-models\1.6.2\swagger-models-1.6.2.jar;C:\Users\ahmed\.m2\repository\io\swagger\core\v3\swagger-models\2.1.10\swagger-models-2.1.10.jar;C:\Users\ahmed\.m2\repository\io\swagger\swagger-parser\1.0.54\swagger-parser-1.0.54.jar;C:\Users\ahmed\.m2\repository\io\swagger\parser\v3\swagger-parser\2.0.25\swagger-parser-2.0.25.jar;C:\Users\ahmed\.m2\repository\io\swagger\parser\v3\swagger-parser-core\2.0.25\swagger-parser-core-2.0.25.jar;C:\Users\ahmed\.m2\repository\io\swagger\parser\v3\swagger-parser-v2-converter\2.0.25\swagger-parser-v2-converter-2.0.25.jar;C:\Users\ahmed\.m2\repository\io\swagger\parser\v3\swagger-parser-v3\2.0.25\swagger-parser-v3-2.0.25.jar;C:\Users\ahmed\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\ahmed\.m2\repository\org\glassfish\jaxb\txw2\2.3.2\txw2-2.3.2.jar;C:\Users\ahmed\.m2\repository\io\rest-assured\xml-path\5.1.1\xml-path-5.1.1.jar;C:\Users\ahmed\.m2\repository\ru\gladorange\oas-gen-maven-plugin\1.0\oas-gen-maven-plugin-1.0.jar;C:\Users\ahmed\.m2\repository\javax\ws\rs\javax.ws.rs-api\2.1\javax.ws.rs-api-2.1.jar;C:\Users\ahmed\.m2\repository\org\apache\maven\maven-plugin-api\3.0\maven-plugin-api-3.0.jar;C:\Users\ahmed\.m2\repository\org\apache\maven\maven-model\3.0\maven-model-3.0.jar;C:\Users\ahmed\.m2\repository\org\apache\maven\maven-artifact\3.0\maven-artifact-3.0.jar;C:\Users\ahmed\.m2\repository\org\sonatype\sisu\sisu-inject-plexus\1.4.2\sisu-inject-plexus-1.4.2.jar;C:\Users\ahmed\.m2\repository\org\codehaus\plexus\plexus-classworlds\2.2.3\plexus-classworlds-2.2.3.jar;C:\Users\ahmed\.m2\repository\org\sonatype\sisu\sisu-inject-bean\1.4.2\sisu-inject-bean-1.4.2.jar;C:\Users\ahmed\.m2\repository\org\sonatype\sisu\sisu-guice\2.1.7\sisu-guice-2.1.7-noaop.jar;C:\Users\ahmed\.m2\repository\io\swagger\core\v3\swagger-jaxrs2\2.0.0-rc4\swagger-jaxrs2-2.0.0-rc4.jar;C:\Users\ahmed\.m2\repository\org\reflections\reflections\0.9.11\reflections-0.9.11.jar;C:\Users\ahmed\.m2\repository\org\javassist\javassist\3.21.0-GA\javassist-3.21.0-GA.jar;C:\Users\ahmed\.m2\repository\io\swagger\core\v3\swagger-integration\2.0.0-rc4\swagger-integration-2.0.0-rc4.jar;C:\Users\ahmed\.m2\repository\org\apache\maven\maven-compat\3.0\maven-compat-3.0.jar;C:\Users\ahmed\.m2\repository\org\apache\maven\maven-model-builder\3.0\maven-model-builder-3.0.jar;C:\Users\ahmed\.m2\repository\org\apache\maven\maven-settings\3.0\maven-settings-3.0.jar;C:\Users\ahmed\.m2\repository\org\apache\maven\maven-core\3.0\maven-core-3.0.jar;C:\Users\ahmed\.m2\repository\org\apache\maven\maven-settings-builder\3.0\maven-settings-builder-3.0.jar;C:\Users\ahmed\.m2\repository\org\apache\maven\maven-repository-metadata\3.0\maven-repository-metadata-3.0.jar;C:\Users\ahmed\.m2\repository\org\apache\maven\maven-aether-provider\3.0\maven-aether-provider-3.0.jar;C:\Users\ahmed\.m2\repository\org\sonatype\aether\aether-impl\1.7\aether-impl-1.7.jar;C:\Users\ahmed\.m2\repository\org\sonatype\aether\aether-spi\1.7\aether-spi-1.7.jar;C:\Users\ahmed\.m2\repository\org\sonatype\aether\aether-api\1.7\aether-api-1.7.jar;C:\Users\ahmed\.m2\repository\org\sonatype\aether\aether-util\1.7\aether-util-1.7.jar;C:\Users\ahmed\.m2\repository\org\sonatype\plexus\plexus-sec-dispatcher\1.3\plexus-sec-dispatcher-1.3.jar;C:\Users\ahmed\.m2\repository\org\sonatype\plexus\plexus-cipher\1.4\plexus-cipher-1.4.jar;C:\Users\ahmed\.m2\repository\org\codehaus\plexus\plexus-utils\2.0.4\plexus-utils-2.0.4.jar;C:\Users\ahmed\.m2\repository\org\codehaus\plexus\plexus-interpolation\1.14\plexus-interpolation-1.14.jar;C:\Users\ahmed\.m2\repository\org\codehaus\plexus\plexus-component-annotations\1.5.5\plexus-component-annotations-1.5.5.jar;C:\Users\ahmed\.m2\repository\org\apache\maven\wagon\wagon-provider-api\1.0-beta-6\wagon-provider-api-1.0-beta-6.jar;"/>
+    <property name="java.vm.vendor" value="Microsoft"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://www.microsoft.com"/>
+    <property name="user.timezone" value="Asia/Dhaka"/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Microsoft\jdk-11.0.12.7-hotspot\bin"/>
+    <property name="sun.java.command" value="C:\Users\ahmed\AppData\Local\Temp\surefire12509189465361040559\surefirebooter2448282670824614327.jar C:\Users\ahmed\AppData\Local\Temp\surefire12509189465361040559 2022-12-06T03-19-10_723-jvmRun1 surefire12972631989748676268tmp surefire_0411225127392446959tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\ahmed\IdeaProjects\BOTest-GUI\target\test-classes;C:\Users\ahmed\IdeaProjects\BOTest-GUI\target\classes;C:\Users\ahmed\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.0-M1\junit-jupiter-api-5.8.0-M1.jar;C:\Users\ahmed\.m2\repository\org\apiguardian\apiguardian-api\1.1.1\apiguardian-api-1.1.1.jar;C:\Users\ahmed\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\ahmed\.m2\repository\org\junit\platform\junit-platform-commons\1.8.0-M1\junit-platform-commons-1.8.0-M1.jar;C:\Users\ahmed\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.0-M1\junit-jupiter-engine-5.8.0-M1.jar;C:\Users\ahmed\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib-jdk8\1.4.20\kotlin-stdlib-jdk8-1.4.20.jar;C:\Users\ahmed\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib\1.4.20\kotlin-stdlib-1.4.20.jar;C:\Users\ahmed\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib-common\1.4.20\kotlin-stdlib-common-1.4.20.jar;C:\Users\ahmed\.m2\repository\org\jetbrains\annotations\13.0\annotations-13.0.jar;C:\Users\ahmed\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib-jdk7\1.4.20\kotlin-stdlib-jdk7-1.4.20.jar;C:\Users\ahmed\.m2\repository\org\junit\platform\junit-platform-engine\1.8.0-M1\junit-platform-engine-1.8.0-M1.jar;C:\Users\ahmed\.m2\repository\org\junit\platform\junit-platform-launcher\1.8.0-M1\junit-platform-launcher-1.8.0-M1.jar;C:\Users\ahmed\.m2\repository\org\junit\platform\junit-platform-runner\1.8.0-M1\junit-platform-runner-1.8.0-M1.jar;C:\Users\ahmed\.m2\repository\org\junit\platform\junit-platform-suite-api\1.8.0-M1\junit-platform-suite-api-1.8.0-M1.jar;C:\Users\ahmed\.m2\repository\org\junit\platform\junit-platform-suite-commons\1.8.0-M1\junit-platform-suite-commons-1.8.0-M1.jar;C:\Users\ahmed\.m2\repository\io\qameta\allure\allure-junit5\2.14.0\allure-junit5-2.14.0.jar;C:\Users\ahmed\.m2\repository\io\qameta\allure\allure-junit-platform\2.14.0\allure-junit-platform-2.14.0.jar;C:\Users\ahmed\.m2\repository\io\qameta\allure\allure-java-commons\2.14.0\allure-java-commons-2.14.0.jar;C:\Users\ahmed\.m2\repository\io\qameta\allure\allure-model\2.14.0\allure-model-2.14.0.jar;C:\Users\ahmed\.m2\repository\org\apache\tika\tika-core\1.26\tika-core-1.26.jar;C:\Users\ahmed\.m2\repository\javax\xml\bind\jaxb-api\2.3.1\jaxb-api-2.3.1.jar;C:\Users\ahmed\.m2\repository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;C:\Users\ahmed\.m2\repository\javax\activation\activation\1.1.1\activation-1.1.1.jar;C:\Users\ahmed\.m2\repository\org\jooq\joor-java-8\0.9.14\joor-java-8-0.9.14.jar;C:\Users\ahmed\.m2\repository\io\qameta\allure\allure-test-filter\2.14.0\allure-test-filter-2.14.0.jar;C:\Users\ahmed\.m2\repository\org\openjfx\javafx-controls\11\javafx-controls-11.jar;C:\Users\ahmed\.m2\repository\org\openjfx\javafx-controls\11\javafx-controls-11-win.jar;C:\Users\ahmed\.m2\repository\org\openjfx\javafx-graphics\11\javafx-graphics-11.jar;C:\Users\ahmed\.m2\repository\org\openjfx\javafx-graphics\11\javafx-graphics-11-win.jar;C:\Users\ahmed\.m2\repository\org\openjfx\javafx-base\11\javafx-base-11.jar;C:\Users\ahmed\.m2\repository\org\openjfx\javafx-base\11\javafx-base-11-win.jar;C:\Users\ahmed\.m2\repository\commons-cli\commons-cli\1.4\commons-cli-1.4.jar;C:\Users\ahmed\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\ahmed\.m2\repository\org\apache\commons\commons-compress\1.20\commons-compress-1.20.jar;C:\Users\ahmed\.m2\repository\org\apache\commons\commons-csv\1.8\commons-csv-1.8.jar;C:\Users\ahmed\.m2\repository\commons-io\commons-io\2.7\commons-io-2.7.jar;C:\Users\ahmed\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\ahmed\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\ahmed\.m2\repository\org\apache\commons\commons-math3\3.6.1\commons-math3-3.6.1.jar;C:\Users\ahmed\.m2\repository\org\apache\commons\commons-text\1.8\commons-text-1.8.jar;C:\Users\ahmed\.m2\repository\com\sun\xml\fastinfoset\FastInfoset\1.2.16\FastInfoset-1.2.16.jar;C:\Users\ahmed\.m2\repository\org\apache\groovy\groovy\4.0.1\groovy-4.0.1.jar;C:\Users\ahmed\.m2\repository\org\apache\groovy\groovy-xml\4.0.1\groovy-xml-4.0.1.jar;C:\Users\ahmed\.m2\repository\org\hamcrest\hamcrest\2.1\hamcrest-2.1.jar;C:\Users\ahmed\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\ahmed\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\ahmed\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\ahmed\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\ahmed\.m2\repository\com\sun\istack\istack-commons-runtime\3.0.8\istack-commons-runtime-3.0.8.jar;C:\Users\ahmed\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.12.1\jackson-annotations-2.12.1.jar;C:\Users\ahmed\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.11.4\jackson-core-2.11.4.jar;C:\Users\ahmed\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.11.4\jackson-databind-2.11.4.jar;C:\Users\ahmed\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-yaml\2.11.4\jackson-dataformat-yaml-2.11.4.jar;C:\Users\ahmed\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.12.2\jackson-datatype-jdk8-2.12.2.jar;C:\Users\ahmed\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.11.4\jackson-datatype-jsr310-2.11.4.jar;C:\Users\ahmed\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.0\jakarta.activation-api-2.1.0.jar;C:\Users\ahmed\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.0\jakarta.xml.bind-api-4.0.0.jar;C:\Users\ahmed\.m2\repository\com\sun\xml\bind\jaxb-impl\2.3.0\jaxb-impl-2.3.0.jar;C:\Users\ahmed\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar;C:\Users\ahmed\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.30\jcl-over-slf4j-1.7.30.jar;C:\Users\ahmed\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\ahmed\.m2\repository\org\webjars\jquery\3.6.0\jquery-3.6.0.jar;C:\Users\ahmed\.m2\repository\io\rest-assured\json-path\5.1.1\json-path-5.1.1.jar;C:\Users\ahmed\.m2\repository\org\apache\groovy\groovy-json\4.0.1\groovy-json-4.0.1.jar;C:\Users\ahmed\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\ahmed\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\ahmed\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;C:\Users\ahmed\.m2\repository\org\apache\logging\log4j\log4j-api\2.17.1\log4j-api-2.17.1.jar;C:\Users\ahmed\.m2\repository\org\apache\logging\log4j\log4j-core\2.17.1\log4j-core-2.17.1.jar;C:\Users\ahmed\.m2\repository\org\apache\logging\log4j\log4j-iostreams\2.13.3\log4j-iostreams-2.13.3.jar;C:\Users\ahmed\.m2\repository\io\rest-assured\rest-assured\5.1.1\rest-assured-5.1.1.jar;C:\Users\ahmed\.m2\repository\io\rest-assured\rest-assured-common\5.1.1\rest-assured-common-5.1.1.jar;C:\Users\ahmed\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\ahmed\.m2\repository\org\slf4j\slf4j-ext\1.7.28\slf4j-ext-1.7.28.jar;C:\Users\ahmed\.m2\repository\org\slf4j\slf4j-log4j12\1.7.28\slf4j-log4j12-1.7.28.jar;C:\Users\ahmed\.m2\repository\org\yaml\snakeyaml\1.26\snakeyaml-1.26.jar;C:\Users\ahmed\.m2\repository\org\jvnet\staxex\stax-ex\1.8.1\stax-ex-1.8.1.jar;C:\Users\ahmed\.m2\repository\io\swagger\swagger-annotations\1.6.2\swagger-annotations-1.6.2.jar;C:\Users\ahmed\.m2\repository\io\swagger\core\v3\swagger-core\2.1.10\swagger-core-2.1.10.jar;C:\Users\ahmed\.m2\repository\io\swagger\core\v3\swagger-annotations\2.1.10\swagger-annotations-2.1.10.jar;C:\Users\ahmed\.m2\repository\jakarta\validation\jakarta.validation-api\2.0.2\jakarta.validation-api-2.0.2.jar;C:\Users\ahmed\.m2\repository\io\swagger\swagger-compat-spec-parser\1.0.54\swagger-compat-spec-parser-1.0.54.jar;C:\Users\ahmed\.m2\repository\com\github\java-json-tools\json-schema-validator\2.2.14\json-schema-validator-2.2.14.jar;C:\Users\ahmed\.m2\repository\com\github\java-json-tools\jackson-coreutils-equivalence\1.0\jackson-coreutils-equivalence-1.0.jar;C:\Users\ahmed\.m2\repository\com\github\java-json-tools\json-schema-core\1.2.14\json-schema-core-1.2.14.jar;C:\Users\ahmed\.m2\repository\com\github\java-json-tools\uri-template\0.10\uri-template-0.10.jar;C:\Users\ahmed\.m2\repository\org\mozilla\rhino\1.7.7.2\rhino-1.7.7.2.jar;C:\Users\ahmed\.m2\repository\com\sun\mail\mailapi\1.6.2\mailapi-1.6.2.jar;C:\Users\ahmed\.m2\repository\joda-time\joda-time\2.10.5\joda-time-2.10.5.jar;C:\Users\ahmed\.m2\repository\com\googlecode\libphonenumber\libphonenumber\8.11.1\libphonenumber-8.11.1.jar;C:\Users\ahmed\.m2\repository\net\sf\jopt-simple\jopt-simple\5.0.4\jopt-simple-5.0.4.jar;C:\Users\ahmed\.m2\repository\com\github\java-json-tools\json-patch\1.13\json-patch-1.13.jar;C:\Users\ahmed\.m2\repository\com\github\java-json-tools\msg-simple\1.2\msg-simple-1.2.jar;C:\Users\ahmed\.m2\repository\com\github\java-json-tools\btf\1.3\btf-1.3.jar;C:\Users\ahmed\.m2\repository\com\github\java-json-tools\jackson-coreutils\2.0\jackson-coreutils-2.0.jar;C:\Users\ahmed\.m2\repository\io\swagger\swagger-core\1.6.2\swagger-core-1.6.2.jar;C:\Users\ahmed\.m2\repository\com\google\guava\guava\27.0.1-android\guava-27.0.1-android.jar;C:\Users\ahmed\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\ahmed\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\ahmed\.m2\repository\org\checkerframework\checker-compat-qual\2.5.2\checker-compat-qual-2.5.2.jar;C:\Users\ahmed\.m2\repository\com\google\errorprone\error_prone_annotations\2.2.0\error_prone_annotations-2.2.0.jar;C:\Users\ahmed\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\ahmed\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.17\animal-sniffer-annotations-1.17.jar;C:\Users\ahmed\.m2\repository\javax\validation\validation-api\1.1.0.Final\validation-api-1.1.0.Final.jar;C:\Users\ahmed\.m2\repository\io\swagger\swagger-models\1.6.2\swagger-models-1.6.2.jar;C:\Users\ahmed\.m2\repository\io\swagger\core\v3\swagger-models\2.1.10\swagger-models-2.1.10.jar;C:\Users\ahmed\.m2\repository\io\swagger\swagger-parser\1.0.54\swagger-parser-1.0.54.jar;C:\Users\ahmed\.m2\repository\io\swagger\parser\v3\swagger-parser\2.0.25\swagger-parser-2.0.25.jar;C:\Users\ahmed\.m2\repository\io\swagger\parser\v3\swagger-parser-core\2.0.25\swagger-parser-core-2.0.25.jar;C:\Users\ahmed\.m2\repository\io\swagger\parser\v3\swagger-parser-v2-converter\2.0.25\swagger-parser-v2-converter-2.0.25.jar;C:\Users\ahmed\.m2\repository\io\swagger\parser\v3\swagger-parser-v3\2.0.25\swagger-parser-v3-2.0.25.jar;C:\Users\ahmed\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\ahmed\.m2\repository\org\glassfish\jaxb\txw2\2.3.2\txw2-2.3.2.jar;C:\Users\ahmed\.m2\repository\io\rest-assured\xml-path\5.1.1\xml-path-5.1.1.jar;C:\Users\ahmed\.m2\repository\ru\gladorange\oas-gen-maven-plugin\1.0\oas-gen-maven-plugin-1.0.jar;C:\Users\ahmed\.m2\repository\javax\ws\rs\javax.ws.rs-api\2.1\javax.ws.rs-api-2.1.jar;C:\Users\ahmed\.m2\repository\org\apache\maven\maven-plugin-api\3.0\maven-plugin-api-3.0.jar;C:\Users\ahmed\.m2\repository\org\apache\maven\maven-model\3.0\maven-model-3.0.jar;C:\Users\ahmed\.m2\repository\org\apache\maven\maven-artifact\3.0\maven-artifact-3.0.jar;C:\Users\ahmed\.m2\repository\org\sonatype\sisu\sisu-inject-plexus\1.4.2\sisu-inject-plexus-1.4.2.jar;C:\Users\ahmed\.m2\repository\org\codehaus\plexus\plexus-classworlds\2.2.3\plexus-classworlds-2.2.3.jar;C:\Users\ahmed\.m2\repository\org\sonatype\sisu\sisu-inject-bean\1.4.2\sisu-inject-bean-1.4.2.jar;C:\Users\ahmed\.m2\repository\org\sonatype\sisu\sisu-guice\2.1.7\sisu-guice-2.1.7-noaop.jar;C:\Users\ahmed\.m2\repository\io\swagger\core\v3\swagger-jaxrs2\2.0.0-rc4\swagger-jaxrs2-2.0.0-rc4.jar;C:\Users\ahmed\.m2\repository\org\reflections\reflections\0.9.11\reflections-0.9.11.jar;C:\Users\ahmed\.m2\repository\org\javassist\javassist\3.21.0-GA\javassist-3.21.0-GA.jar;C:\Users\ahmed\.m2\repository\io\swagger\core\v3\swagger-integration\2.0.0-rc4\swagger-integration-2.0.0-rc4.jar;C:\Users\ahmed\.m2\repository\org\apache\maven\maven-compat\3.0\maven-compat-3.0.jar;C:\Users\ahmed\.m2\repository\org\apache\maven\maven-model-builder\3.0\maven-model-builder-3.0.jar;C:\Users\ahmed\.m2\repository\org\apache\maven\maven-settings\3.0\maven-settings-3.0.jar;C:\Users\ahmed\.m2\repository\org\apache\maven\maven-core\3.0\maven-core-3.0.jar;C:\Users\ahmed\.m2\repository\org\apache\maven\maven-settings-builder\3.0\maven-settings-builder-3.0.jar;C:\Users\ahmed\.m2\repository\org\apache\maven\maven-repository-metadata\3.0\maven-repository-metadata-3.0.jar;C:\Users\ahmed\.m2\repository\org\apache\maven\maven-aether-provider\3.0\maven-aether-provider-3.0.jar;C:\Users\ahmed\.m2\repository\org\sonatype\aether\aether-impl\1.7\aether-impl-1.7.jar;C:\Users\ahmed\.m2\repository\org\sonatype\aether\aether-spi\1.7\aether-spi-1.7.jar;C:\Users\ahmed\.m2\repository\org\sonatype\aether\aether-api\1.7\aether-api-1.7.jar;C:\Users\ahmed\.m2\repository\org\sonatype\aether\aether-util\1.7\aether-util-1.7.jar;C:\Users\ahmed\.m2\repository\org\sonatype\plexus\plexus-sec-dispatcher\1.3\plexus-sec-dispatcher-1.3.jar;C:\Users\ahmed\.m2\repository\org\sonatype\plexus\plexus-cipher\1.4\plexus-cipher-1.4.jar;C:\Users\ahmed\.m2\repository\org\codehaus\plexus\plexus-utils\2.0.4\plexus-utils-2.0.4.jar;C:\Users\ahmed\.m2\repository\org\codehaus\plexus\plexus-interpolation\1.14\plexus-interpolation-1.14.jar;C:\Users\ahmed\.m2\repository\org\codehaus\plexus\plexus-component-annotations\1.5.5\plexus-component-annotations-1.5.5.jar;C:\Users\ahmed\.m2\repository\org\apache\maven\wagon\wagon-provider-api\1.0-beta-6\wagon-provider-api-1.0-beta-6.jar;"/>
+    <property name="allure.results.directory" value="C:\Users\ahmed\IdeaProjects\BOTest-GUI/target/allure-results"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\ahmed"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2021-07-20"/>
+    <property name="java.home" value="C:\Program Files\Microsoft\jdk-11.0.12.7-hotspot"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\ahmed\IdeaProjects\BOTest-GUI"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\ahmed\AppData\Local\Temp\surefire12509189465361040559\surefirebooter2448282670824614327.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="11.0.12+7"/>
+    <property name="user.name" value="ahmed"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Microsoft-25199"/>
+    <property name="localRepository" value="C:\Users\ahmed\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/microsoft/openjdk/issues"/>
+    <property name="java.io.tmpdir" value="C:\Users\ahmed\AppData\Local\Temp\"/>
+    <property name="java.version" value="11.0.12"/>
+    <property name="user.dir" value="C:\Users\ahmed\IdeaProjects\BOTest-GUI"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Program Files\Microsoft\jdk-11.0.12.7-hotspot\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Python311\Scripts\;C:\Python311\;C:\Program Files\Microsoft\jdk-11.0.12.7-hotspot\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\dotnet\;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\Azure Data Studio\bin;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Users\ahmed\scoop\shims;C:\Users\ahmed\AppData\Local\Microsoft\WindowsApps;C:\Users\ahmed\.dotnet\tools;C:\Users\ahmed\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\Azure Data Studio\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.3\bin;C:\Users\ahmed\AppData\Roaming\npm;C:\Program Files\apache-maven-3.8.6\bin;;."/>
+    <property name="junit.jupiter.extensions.autodetection.enabled" value="true"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Microsoft"/>
+    <property name="java.vm.version" value="11.0.12+7"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="55.0"/>
+  </properties>
+  <testcase name="test_L0WMHVTlCM2i_null" classname="WebAPIBOTest" time="7.274">
+    <error message="Connection refused: connect" type="java.net.ConnectException">java.net.ConnectException: Connection refused: connect
+	at WebAPIBOTest.test_L0WMHVTlCM2i_null(WebAPIBOTest.java:94)
+</error>
+    <system-out><![CDATA[Request method:	GET
+Request URI:	http://localhost:8080/api/Category/629147793
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	id=629147793
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+]]></system-out>
+    <system-err><![CDATA[log4j:WARN No appenders could be found for logger (org.apache.http.impl.conn.BasicClientConnectionManager).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+]]></system-err>
+  </testcase>
+  <testcase name="test_5yIm59OwlrvQ_null" classname="WebAPIBOTest" time="4.09">
+    <error message="Connection refused: connect" type="java.net.ConnectException">java.net.ConnectException: Connection refused: connect
+	at WebAPIBOTest.test_5yIm59OwlrvQ_null(WebAPIBOTest.java:114)
+</error>
+    <system-out><![CDATA[Request method:	GET
+Request URI:	http://localhost:8080/api/Pet
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+]]></system-out>
+  </testcase>
+  <testcase name="test_mid4yMOrIZdP_null" classname="WebAPIBOTest" time="4.176">
+    <error message="Connection refused: connect" type="java.net.ConnectException">java.net.ConnectException: Connection refused: connect
+	at WebAPIBOTest.test_mid4yMOrIZdP_null(WebAPIBOTest.java:199)
+</error>
+    <system-out><![CDATA[Request method:	PUT
+Request URI:	http://localhost:8080/api/PhotoUrl
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "id": 1275333069,
+    "url": "hBdgJf"
+}
+]]></system-out>
+  </testcase>
+  <testcase name="test_pv8ZQyUUZ3ph_null" classname="WebAPIBOTest" time="4.078">
+    <error message="Connection refused: connect" type="java.net.ConnectException">java.net.ConnectException: Connection refused: connect
+	at WebAPIBOTest.test_pv8ZQyUUZ3ph_null(WebAPIBOTest.java:29)
+</error>
+    <system-out><![CDATA[Request method:	GET
+Request URI:	http://localhost:8080/api/Category
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+]]></system-out>
+  </testcase>
+  <testcase name="test_1D0hRJgsJyWS_null" classname="WebAPIBOTest" time="4.13">
+    <error message="Connection refused: connect" type="java.net.ConnectException">java.net.ConnectException: Connection refused: connect
+	at WebAPIBOTest.test_1D0hRJgsJyWS_null(WebAPIBOTest.java:73)
+</error>
+    <system-out><![CDATA[Request method:	PUT
+Request URI:	http://localhost:8080/api/Category
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "id": 664930309,
+    "name": "JCqQ"
+}
+]]></system-out>
+  </testcase>
+  <testcase name="test_S7adXC9ofTzE_null" classname="WebAPIBOTest" time="4.063">
+    <error message="Connection refused: connect" type="java.net.ConnectException">java.net.ConnectException: Connection refused: connect
+	at WebAPIBOTest.test_S7adXC9ofTzE_null(WebAPIBOTest.java:155)
+</error>
+    <system-out><![CDATA[Request method:	GET
+Request URI:	http://localhost:8080/api/PhotoUrl
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+]]></system-out>
+  </testcase>
+  <testcase name="test_gZ0hThQ5q7c4_null" classname="WebAPIBOTest" time="4.048">
+    <error message="Connection refused: connect" type="java.net.ConnectException">java.net.ConnectException: Connection refused: connect
+	at WebAPIBOTest.test_gZ0hThQ5q7c4_null(WebAPIBOTest.java:135)
+</error>
+    <system-out><![CDATA[Request method:	GET
+Request URI:	http://localhost:8080/api/Pet/-1417408757
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	id=-1417408757
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+]]></system-out>
+  </testcase>
+  <testcase name="test_o8wBkfDmlzdm_null" classname="WebAPIBOTest" time="4.084">
+    <error message="Connection refused: connect" type="java.net.ConnectException">java.net.ConnectException: Connection refused: connect
+	at WebAPIBOTest.test_o8wBkfDmlzdm_null(WebAPIBOTest.java:220)
+</error>
+    <system-out><![CDATA[Request method:	GET
+Request URI:	http://localhost:8080/api/PhotoUrl/522722107
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	id=522722107
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+]]></system-out>
+  </testcase>
+  <testcase name="test_QLZFoOKh8Qrw_null" classname="WebAPIBOTest" time="4.072">
+    <error message="Connection refused: connect" type="java.net.ConnectException">java.net.ConnectException: Connection refused: connect
+	at WebAPIBOTest.test_QLZFoOKh8Qrw_null(WebAPIBOTest.java:51)
+</error>
+    <system-out><![CDATA[Request method:	POST
+Request URI:	http://localhost:8080/api/Category
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "id": -102330788,
+    "name": "InGKKLuEV"
+}
+]]></system-out>
+  </testcase>
+  <testcase name="test_CekSa4MHlulQ_null" classname="WebAPIBOTest" time="4.114">
+    <error message="Connection refused: connect" type="java.net.ConnectException">java.net.ConnectException: Connection refused: connect
+	at WebAPIBOTest.test_CekSa4MHlulQ_null(WebAPIBOTest.java:177)
+</error>
+    <system-out><![CDATA[Request method:	POST
+Request URI:	http://localhost:8080/api/PhotoUrl
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "id": -1346236527,
+    "url": "aFJROcT"
+}
+]]></system-out>
+  </testcase>
+</testsuite>

@@ -1,0 +1,44 @@
+-------------------------------------------------------------------------------
+Test set: WebAPIBOTest
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 0, Errors: 10, Skipped: 0, Time elapsed: 44.244 s <<< FAILURE! - in WebAPIBOTest
+test_L0WMHVTlCM2i_null  Time elapsed: 7.274 s  <<< ERROR!
+java.net.ConnectException: Connection refused: connect
+	at WebAPIBOTest.test_L0WMHVTlCM2i_null(WebAPIBOTest.java:94)
+
+test_5yIm59OwlrvQ_null  Time elapsed: 4.09 s  <<< ERROR!
+java.net.ConnectException: Connection refused: connect
+	at WebAPIBOTest.test_5yIm59OwlrvQ_null(WebAPIBOTest.java:114)
+
+test_mid4yMOrIZdP_null  Time elapsed: 4.176 s  <<< ERROR!
+java.net.ConnectException: Connection refused: connect
+	at WebAPIBOTest.test_mid4yMOrIZdP_null(WebAPIBOTest.java:199)
+
+test_pv8ZQyUUZ3ph_null  Time elapsed: 4.078 s  <<< ERROR!
+java.net.ConnectException: Connection refused: connect
+	at WebAPIBOTest.test_pv8ZQyUUZ3ph_null(WebAPIBOTest.java:29)
+
+test_1D0hRJgsJyWS_null  Time elapsed: 4.13 s  <<< ERROR!
+java.net.ConnectException: Connection refused: connect
+	at WebAPIBOTest.test_1D0hRJgsJyWS_null(WebAPIBOTest.java:73)
+
+test_S7adXC9ofTzE_null  Time elapsed: 4.063 s  <<< ERROR!
+java.net.ConnectException: Connection refused: connect
+	at WebAPIBOTest.test_S7adXC9ofTzE_null(WebAPIBOTest.java:155)
+
+test_gZ0hThQ5q7c4_null  Time elapsed: 4.048 s  <<< ERROR!
+java.net.ConnectException: Connection refused: connect
+	at WebAPIBOTest.test_gZ0hThQ5q7c4_null(WebAPIBOTest.java:135)
+
+test_o8wBkfDmlzdm_null  Time elapsed: 4.084 s  <<< ERROR!
+java.net.ConnectException: Connection refused: connect
+	at WebAPIBOTest.test_o8wBkfDmlzdm_null(WebAPIBOTest.java:220)
+
+test_QLZFoOKh8Qrw_null  Time elapsed: 4.072 s  <<< ERROR!
+java.net.ConnectException: Connection refused: connect
+	at WebAPIBOTest.test_QLZFoOKh8Qrw_null(WebAPIBOTest.java:51)
+
+test_CekSa4MHlulQ_null  Time elapsed: 4.114 s  <<< ERROR!
+java.net.ConnectException: Connection refused: connect
+	at WebAPIBOTest.test_CekSa4MHlulQ_null(WebAPIBOTest.java:177)
+
