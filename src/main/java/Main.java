@@ -34,7 +34,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) {
         try {
             // title for the stage
-            primaryStage.setTitle("FileChooser");
+            primaryStage.setTitle("BOTest");
 
             // create a File chooser
             FileChooser fil_chooser = new FileChooser();

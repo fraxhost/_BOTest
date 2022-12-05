@@ -1,25 +1,25 @@
+import io.qameta.allure.Story;
 import io.restassured.response.Response;
 import io.restassured.http.ContentType;
 import io.restassured.RestAssured;
-import org.junit.Assert;
-import org.junit.Before;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
-
-import static org.junit.Assert.assertTrue;
+import org.junit.jupiter.api.DisplayName;
 
 public class WebAPIBOTest {
 
-	@Before
+	@BeforeEach
 	public void setUp() {
 		RestAssured.baseURI = "https://localhost:7166";
 	}
 
 	@Test
-	public void test_pv8ZQyUUZ3ph_null() {
-		String testResultId = "test_pv8ZQyUUZ3ph_null";
+	@Story("/api/Category")
+	@DisplayName("GET /api/Category")
+	public void test_aZ5tytApyoTi_null() {
+		String testResultId = "test_aZ5tytApyoTi_null";
 
 		try {
 			Response response = RestAssured
@@ -29,82 +29,90 @@ public class WebAPIBOTest {
 						.get("/api/Category");
 
 			response.then().log().all();
-			assertTrue("Status Code is less than 500", response.statusCode() < 500);
+			Assertions.assertTrue(response.statusCode() < 500, "Status Code is less than 500");
 			System.out.println("Test passed.");
 		} catch (RuntimeException ex) {
 			System.err.println(ex.getMessage());
-			Assert.fail(ex.getMessage());
+			Assertions.fail(ex.getMessage());
 		}
 	}
 
 	@Test
-	public void test_QLZFoOKh8Qrw_null() {
-		String testResultId = "test_QLZFoOKh8Qrw_null";
+	@Story("/api/Category")
+	@DisplayName("POST /api/Category")
+	public void test_hwTEJRheCZWX_null() {
+		String testResultId = "test_hwTEJRheCZWX_null";
 
 		try {
 			Response response = RestAssured
 					.given()
 						.log().all()
 						.contentType(ContentType.JSON)
-						.body("{\"id\": -102330788,\"name\": \"InGKKLuEV\"}")
+						.body("{\"id\": 1803689571,\"name\": \"XXwJld\"}")
 					.when()
 						.post("/api/Category");
 
 			response.then().log().all();
-			assertTrue("Status Code is less than 500", response.statusCode() < 500);
+			Assertions.assertTrue(response.statusCode() < 500, "Status Code is less than 500");
 			System.out.println("Test passed.");
 		} catch (RuntimeException ex) {
 			System.err.println(ex.getMessage());
-			Assert.fail(ex.getMessage());
+			Assertions.fail(ex.getMessage());
 		}
 	}
 
 	@Test
-	public void test_1D0hRJgsJyWS_null() {
-		String testResultId = "test_1D0hRJgsJyWS_null";
+	@Story("/api/Category")
+	@DisplayName("PUT /api/Category")
+	public void test_ZjFzoOIXHKy0_null() {
+		String testResultId = "test_ZjFzoOIXHKy0_null";
 
 		try {
 			Response response = RestAssured
 					.given()
 						.log().all()
 						.contentType(ContentType.JSON)
-						.body("{\"id\": 664930309,\"name\": \"JCqQ\"}")
+						.body("{\"id\": -364504519,\"name\": \"BlX\"}")
 					.when()
 						.put("/api/Category");
 
 			response.then().log().all();
-			assertTrue("Status Code is less than 500", response.statusCode() < 500);
+			Assertions.assertTrue(response.statusCode() < 500, "Status Code is less than 500");
 			System.out.println("Test passed.");
 		} catch (RuntimeException ex) {
 			System.err.println(ex.getMessage());
-			Assert.fail(ex.getMessage());
+			Assertions.fail(ex.getMessage());
 		}
 	}
 
 	@Test
-	public void test_L0WMHVTlCM2i_null() {
-		String testResultId = "test_L0WMHVTlCM2i_null";
+	@Story("/api/Category/{id}")
+	@DisplayName("GET /api/Category/{id}")
+	public void test_vomctv8Mu9e3_null() {
+		String testResultId = "test_vomctv8Mu9e3_null";
 
 		try {
 			Response response = RestAssured
 					.given()
 						.log().all()
-						.pathParam("id", "629147793")
+						.pathParam("id", "-496989936")
 					.when()
 						.get("/api/Category/{id}");
 
 			response.then().log().all();
-			assertTrue("Status Code is less than 500", response.statusCode() < 500);
+			Assertions.assertTrue(response.statusCode() < 500, "Status Code is less than 500");
 			System.out.println("Test passed.");
 		} catch (RuntimeException ex) {
 			System.err.println(ex.getMessage());
-			Assert.fail(ex.getMessage());
+			Assertions.fail(ex.getMessage());
 		}
 	}
 
 	@Test
-	public void test_5yIm59OwlrvQ_null() {
-		String testResultId = "test_5yIm59OwlrvQ_null";
+	@Story("/api/Pet")
+	@DisplayName("GET /api/Pet")
+	public void test_S13xGyNA2XGT_null() {
+		String testResultId = "test_S13xGyNA2XGT_null";
 
 		try {
 			Response response = RestAssured
@@ -114,38 +122,42 @@ public class WebAPIBOTest {
 						.get("/api/Pet");
 
 			response.then().log().all();
-			assertTrue("Status Code is less than 500", response.statusCode() < 500);
+			Assertions.assertTrue(response.statusCode() < 500, "Status Code is less than 500");
 			System.out.println("Test passed.");
 		} catch (RuntimeException ex) {
 			System.err.println(ex.getMessage());
-			Assert.fail(ex.getMessage());
+			Assertions.fail(ex.getMessage());
 		}
 	}
 
 	@Test
-	public void test_gZ0hThQ5q7c4_null() {
-		String testResultId = "test_gZ0hThQ5q7c4_null";
+	@Story("/api/Pet/{id}")
+	@DisplayName("GET /api/Pet/{id}")
+	public void test_J4eGD3wkrQdZ_null() {
+		String testResultId = "test_J4eGD3wkrQdZ_null";
 
 		try {
 			Response response = RestAssured
 					.given()
 						.log().all()
-						.pathParam("id", "-1417408757")
+						.pathParam("id", "-1545171236")
 					.when()
 						.get("/api/Pet/{id}");
 
 			response.then().log().all();
-			assertTrue("Status Code is less than 500", response.statusCode() < 500);
+			Assertions.assertTrue(response.statusCode() < 500, "Status Code is less than 500");
 			System.out.println("Test passed.");
 		} catch (RuntimeException ex) {
 			System.err.println(ex.getMessage());
-			Assert.fail(ex.getMessage());
+			Assertions.fail(ex.getMessage());
 		}
 	}
 
 	@Test
-	public void test_S7adXC9ofTzE_null() {
-		String testResultId = "test_S7adXC9ofTzE_null";
+	@Story("/api/PhotoUrl")
+	@DisplayName("GET /api/PhotoUrl")
+	public void test_KxI3wIqIqdtz_null() {
+		String testResultId = "test_KxI3wIqIqdtz_null";
 
 		try {
 			Response response = RestAssured
@@ -155,76 +167,82 @@ public class WebAPIBOTest {
 						.get("/api/PhotoUrl");
 
 			response.then().log().all();
-			assertTrue("Status Code is less than 500", response.statusCode() < 500);
+			Assertions.assertTrue(response.statusCode() < 500, "Status Code is less than 500");
 			System.out.println("Test passed.");
 		} catch (RuntimeException ex) {
 			System.err.println(ex.getMessage());
-			Assert.fail(ex.getMessage());
+			Assertions.fail(ex.getMessage());
 		}
 	}
 
 	@Test
-	public void test_CekSa4MHlulQ_null() {
-		String testResultId = "test_CekSa4MHlulQ_null";
+	@Story("/api/PhotoUrl")
+	@DisplayName("POST /api/PhotoUrl")
+	public void test_2sF7BTPbXE3p_null() {
+		String testResultId = "test_2sF7BTPbXE3p_null";
 
 		try {
 			Response response = RestAssured
 					.given()
 						.log().all()
 						.contentType(ContentType.JSON)
-						.body("{\"id\": -1346236527,\"url\": \"aFJROcT\"}")
+						.body("{\"id\": -1232856273,\"url\": \"PERcR\"}")
 					.when()
 						.post("/api/PhotoUrl");
 
 			response.then().log().all();
-			assertTrue("Status Code is less than 500", response.statusCode() < 500);
+			Assertions.assertTrue(response.statusCode() < 500, "Status Code is less than 500");
 			System.out.println("Test passed.");
 		} catch (RuntimeException ex) {
 			System.err.println(ex.getMessage());
-			Assert.fail(ex.getMessage());
+			Assertions.fail(ex.getMessage());
 		}
 	}
 
 	@Test
-	public void test_mid4yMOrIZdP_null() {
-		String testResultId = "test_mid4yMOrIZdP_null";
+	@Story("/api/PhotoUrl")
+	@DisplayName("PUT /api/PhotoUrl")
+	public void test_J5JtSo3PS8Vv_null() {
+		String testResultId = "test_J5JtSo3PS8Vv_null";
 
 		try {
 			Response response = RestAssured
 					.given()
 						.log().all()
 						.contentType(ContentType.JSON)
-						.body("{\"id\": 1275333069,\"url\": \"hBdgJf\"}")
+						.body("{\"id\": 1654954478,\"url\": \"QP\"}")
 					.when()
 						.put("/api/PhotoUrl");
 
 			response.then().log().all();
-			assertTrue("Status Code is less than 500", response.statusCode() < 500);
+			Assertions.assertTrue(response.statusCode() < 500, "Status Code is less than 500");
 			System.out.println("Test passed.");
 		} catch (RuntimeException ex) {
 			System.err.println(ex.getMessage());
-			Assert.fail(ex.getMessage());
+			Assertions.fail(ex.getMessage());
 		}
 	}
 
 	@Test
-	public void test_o8wBkfDmlzdm_null() {
-		String testResultId = "test_o8wBkfDmlzdm_null";
+	@Story("/api/PhotoUrl/{id}")
+	@DisplayName("GET /api/PhotoUrl/{id}")
+	public void test_6oIAj860xOaW_null() {
+		String testResultId = "test_6oIAj860xOaW_null";
 
 		try {
 			Response response = RestAssured
 					.given()
 						.log().all()
-						.pathParam("id", "522722107")
+						.pathParam("id", "-1304425081")
 					.when()
 						.get("/api/PhotoUrl/{id}");
 
 			response.then().log().all();
-			assertTrue("Status Code is less than 500", response.statusCode() < 500);
+			Assertions.assertTrue(response.statusCode() < 500, "Status Code is less than 500");
 			System.out.println("Test passed.");
 		} catch (RuntimeException ex) {
 			System.err.println(ex.getMessage());
-			Assert.fail(ex.getMessage());
+			Assertions.fail(ex.getMessage());
 		}
 	}
 

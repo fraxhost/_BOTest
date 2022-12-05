@@ -27,18 +27,20 @@ public class RestAssuredTestWriter {
         // import statements
         // TODO: change it/
         // testClass.append("package generation;").append("\n");
+        testClass.append("import io.qameta.allure.Story;").append("\n");
         testClass.append("import io.restassured.response.Response;").append("\n");
         testClass.append("import io.restassured.http.ContentType;").append("\n");
         testClass.append("import io.restassured.RestAssured;").append("\n");
-        testClass.append("import org.junit.Assert;").append("\n");
-        testClass.append("import org.junit.Before;").append("\n\n");
+        testClass.append("import org.junit.jupiter.api.Assertions;").append("\n");
+        testClass.append("import org.junit.jupiter.api.BeforeEach;").append("\n");
 //        testClass.append("import org.junit.Test;").append("\n\n");
         testClass.append("import org.junit.jupiter.api.Test;").append("\n\n");
-        testClass.append("import static org.junit.Assert.assertEquals;").append("\n\n");
-        testClass.append("import static org.junit.Assert.assertTrue;").append("\n\n");
+        testClass.append("import org.junit.jupiter.api.DisplayName;").append("\n\n");
+//        testClass.append("import static org.junit.Assert.assertEquals;").append("\n\n");
+//        testClass.append("import static org.junit.Assert.assertTrue;").append("\n\n");
 
         testClass.append("public class ").append(getClassName()).append(" {").append("\n\n");
-        testClass.append("\t").append("@Before").append("\n");
+        testClass.append("\t").append("@BeforeEach").append("\n");
         testClass.append("\t").append("public void setUp() {").append("\n");
         // index 0 denotes http server / index 1 denotes https server
         testClass.append("\t\t").append("RestAssured.baseURI = \"").append(specification.getSpecification().getServers()
@@ -48,6 +50,8 @@ public class RestAssuredTestWriter {
 
         for (TestCase testCase: testCases) {
             testClass.append("\t").append("@Test").append("\n");
+            testClass.append("\t").append("@Story(\"").append(testCase.getPath()).append("\")\n");
+            testClass.append("\t").append("@DisplayName(\"").append(testCase.getMethod()).append(" ").append(testCase.getPath()).append("\")\n");
             testClass.append("\t").append("public void ").append(testCase.getId().replace("/","_"))
                     .append("() {").append("\n");
             testClass.append("\t\t").append("String testResultId = \"").append(testCase.getId()).append("\";").append("\n\n");
@@ -106,12 +110,12 @@ public class RestAssuredTestWriter {
 //            } else {
 //                testClass.append("\t\t\t").append("assertEquals(404, response.statusCode());").append("\n");
 //            }
-            testClass.append("\t\t\t").append("assertTrue(\"Status Code is less than 500\", response.statusCode() < 500);")
-                    .append("\n");
+//            testClass.append("\t\t\t").append("Assertions.assertTrue(\"Status Code is less than 500\", response.statusCode() < 500);").append("\n");
+            testClass.append("\t\t\t").append("Assertions.assertTrue(response.statusCode() < 500, \"Status Code is less than 500\");").append("\n");
             testClass.append("\t\t\t").append("System.out.println(\"Test passed.\");").append("\n");
             testClass.append("\t\t").append("} catch (RuntimeException ex) {").append("\n");
             testClass.append("\t\t\t").append("System.err.println(ex.getMessage());").append("\n");
-            testClass.append("\t\t\t").append("Assert.fail(ex.getMessage());").append("\n");
+            testClass.append("\t\t\t").append("Assertions.fail(ex.getMessage());").append("\n");
             testClass.append("\t\t").append("}").append("\n");
             testClass.append("\t").append("}").append("\n\n");
         }
