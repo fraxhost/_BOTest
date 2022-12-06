@@ -51,7 +51,7 @@ public class Main extends Application {
                         File file = fil_chooser.showOpenDialog(primaryStage);
 
                         if (file != null) {
-                            specificationFileLabel.setText(file.getAbsolutePath());
+                            specificationFileLabel.setText(file.getName());
                         }
 
                         if (file != null) {

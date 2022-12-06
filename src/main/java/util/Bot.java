@@ -4,6 +4,7 @@ import configuration.generators.DefaultTestConfigurationGenerator;
 import configuration.pojos.TestConfigurationObject;
 import helpers.BoTestIO;
 import helpers.JsonToYaml;
+import org.apache.log4j.BasicConfigurator;
 import specification.OpenApiSpecification;
 import testcases.TestCase;
 import testcases.generators.AbstractTestCaseGenerator;
@@ -17,7 +18,7 @@ public class Bot {
         /**
          * Logger Configuration
          */
-        // BasicConfigurator.configure();
+         BasicConfigurator.configure();
 
         /**
          * JSON to YAML
@@ -30,9 +31,7 @@ public class Bot {
          */
         OpenApiSpecification openApiSpecification = new OpenApiSpecification(yamlOASPath);
 
-        System.out.println("##########");
         System.out.println("Specification Loaded...");
-        System.out.println("##########");
         BoTestIO.writeToFile("src/main/resources/intermediary-generated-files/api-specification/" +
                         openApiSpecification.getSpecification().getInfo().getTitle() + ".js",
                 openApiSpecification.getSpecification().toString());
@@ -45,9 +44,7 @@ public class Bot {
                 openApiSpecification);
         TestConfigurationObject testConfigurationObject = defaultTestConfigurationGenerator.generate();
 
-        System.out.println("##########");
         System.out.println("Test Configuration Generated...");
-        System.out.println("##########");
         BoTestIO.writeToFile("src/main/resources/intermediary-generated-files/test-configuration/" +
                         openApiSpecification.getSpecification().getInfo().getTitle() + ".js",
                 testConfigurationObject.getTestConfiguration().toString());
@@ -61,9 +58,7 @@ public class Bot {
                 testConfigurationObject);
         List<TestCase> testCases = abstractTestCaseGenerator.generateTestCases();
 
-        System.out.println("##########");
         System.out.println("Abstract Test Case Generated...");
-        System.out.println("##########");
         BoTestIO.writeToFile("src/main/resources/intermediary-generated-files/test-cases/" +
                         openApiSpecification.getSpecification().getInfo().getTitle() + ".js",
                 testCases.toString());
@@ -76,9 +71,7 @@ public class Bot {
         String testClass = testWriter.writeTest();
         BoTestIO.writeToFile("src/test/java/" + testWriter.getClassName() + ".java", testClass);
 
-        System.out.println("##########");
         System.out.println("REST Assured Tests Generated...");
-        System.out.println("##########");
         BoTestIO.writeToFile("src/main/resources/intermediary-generated-files/test-classes/" +
                         openApiSpecification.getSpecification().getInfo().getTitle() + ".js", testClass);
 
@@ -93,10 +86,7 @@ public class Bot {
         Command.execute("mvn clean test");
         Command.execute("allure serve target/allure-results");
 
-        System.err.println("shesh shesh");
-
-        System.out.println("##########");
         System.out.println("All Tests Executed...");
-        System.out.println("##########");
+
     }
 }

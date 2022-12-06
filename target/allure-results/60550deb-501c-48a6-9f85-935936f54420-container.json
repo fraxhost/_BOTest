@@ -1,1 +1,0 @@
-{"uuid":"60550deb-501c-48a6-9f85-935936f54420","name":"GET /api/Pet","children":["c0e4d36a-2815-4294-b803-5ab2787f3157"],"befores":[{"name":"setUp","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1670335860801,"stop":1670335860802}],"afters":[],"links":[],"start":1670335860797,"stop":1670335860837}

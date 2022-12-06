@@ -1,44 +1,44 @@
 -------------------------------------------------------------------------------
 Test set: WebAPIBOTest
 -------------------------------------------------------------------------------
-Tests run: 10, Failures: 7, Errors: 3, Skipped: 0, Time elapsed: 3.725 s <<< FAILURE! - in WebAPIBOTest
-test_2EDO1XiER2wg_null  Time elapsed: 3.178 s  <<< FAILURE!
+Tests run: 10, Failures: 7, Errors: 3, Skipped: 0, Time elapsed: 3.652 s <<< FAILURE! - in WebAPIBOTest
+test_lNgOYqBnDefc_null  Time elapsed: 3.234 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: Target host is null
-	at WebAPIBOTest.test_2EDO1XiER2wg_null(WebAPIBOTest.java:36)
+	at WebAPIBOTest.test_lNgOYqBnDefc_null(WebAPIBOTest.java:174)
 
-test_uzo11uXXw961_null  Time elapsed: 0.037 s  <<< ERROR!
-java.net.URISyntaxException: Illegal character in path at index 18: null/null/api/Pet/{id}/null/null/api/Pet/1065621695
-	at WebAPIBOTest.test_uzo11uXXw961_null(WebAPIBOTest.java:145)
+test_6LshWKeDbjai_null  Time elapsed: 0.044 s  <<< ERROR!
+java.net.URISyntaxException: Illegal character in path at index 23: null/null/api/PhotoUrl/{id}/null/null/api/PhotoUrl/-1599992815
+	at WebAPIBOTest.test_6LshWKeDbjai_null(WebAPIBOTest.java:238)
 
-test_kJxVMlBmhWE9_null  Time elapsed: 0.191 s  <<< FAILURE!
+test_X5j7RDqatnAT_null  Time elapsed: 0.027 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: Target host is null
-	at WebAPIBOTest.test_kJxVMlBmhWE9_null(WebAPIBOTest.java:198)
+	at WebAPIBOTest.test_X5j7RDqatnAT_null(WebAPIBOTest.java:36)
 
-test_8M8IkUbRha7H_null  Time elapsed: 0.04 s  <<< FAILURE!
+test_x1g1FKbw6hNl_null  Time elapsed: 0.107 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: Target host is null
-	at WebAPIBOTest.test_8M8IkUbRha7H_null(WebAPIBOTest.java:129)
+	at WebAPIBOTest.test_x1g1FKbw6hNl_null(WebAPIBOTest.java:198)
 
-test_a8pxlWXxfrdh_null  Time elapsed: 0.043 s  <<< FAILURE!
+test_lngsCuXX0w8C_null  Time elapsed: 0.014 s  <<< ERROR!
+java.net.URISyntaxException: Illegal character in path at index 23: null/null/api/Category/{id}/null/null/api/Category/-276686745
+	at WebAPIBOTest.test_lngsCuXX0w8C_null(WebAPIBOTest.java:100)
+
+test_3JLqKhepVSKm_null  Time elapsed: 0.039 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: Target host is null
-	at WebAPIBOTest.test_a8pxlWXxfrdh_null(WebAPIBOTest.java:60)
+	at WebAPIBOTest.test_3JLqKhepVSKm_null(WebAPIBOTest.java:84)
 
-test_6FpKUmCRbFY6_null  Time elapsed: 0.026 s  <<< FAILURE!
+test_sCBmCrrg3K3F_null  Time elapsed: 0.009 s  <<< ERROR!
+java.net.URISyntaxException: Illegal character in path at index 18: null/null/api/Pet/{id}/null/null/api/Pet/1803558199
+	at WebAPIBOTest.test_sCBmCrrg3K3F_null(WebAPIBOTest.java:145)
+
+test_6JqIlsOCi4U4_null  Time elapsed: 0.029 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: Target host is null
-	at WebAPIBOTest.test_6FpKUmCRbFY6_null(WebAPIBOTest.java:84)
+	at WebAPIBOTest.test_6JqIlsOCi4U4_null(WebAPIBOTest.java:60)
 
-test_uGKOqlJkN8A7_null  Time elapsed: 0.028 s  <<< FAILURE!
+test_rdJCHXUhQZQ9_null  Time elapsed: 0.02 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: Target host is null
-	at WebAPIBOTest.test_uGKOqlJkN8A7_null(WebAPIBOTest.java:222)
+	at WebAPIBOTest.test_rdJCHXUhQZQ9_null(WebAPIBOTest.java:222)
 
-test_z0sAFL8ibW8I_null  Time elapsed: 0.011 s  <<< ERROR!
-java.net.URISyntaxException: Illegal character in path at index 23: null/null/api/PhotoUrl/{id}/null/null/api/PhotoUrl/-819327397
-	at WebAPIBOTest.test_z0sAFL8ibW8I_null(WebAPIBOTest.java:238)
-
-test_G8QRbdgqMen7_null  Time elapsed: 0.011 s  <<< ERROR!
-java.net.URISyntaxException: Illegal character in path at index 23: null/null/api/Category/{id}/null/null/api/Category/-521892454
-	at WebAPIBOTest.test_G8QRbdgqMen7_null(WebAPIBOTest.java:100)
-
-test_BwJkXOkP8isI_null  Time elapsed: 0.017 s  <<< FAILURE!
+test_lVx5eZB7jUU2_null  Time elapsed: 0.01 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: Target host is null
-	at WebAPIBOTest.test_BwJkXOkP8isI_null(WebAPIBOTest.java:174)
+	at WebAPIBOTest.test_lVx5eZB7jUU2_null(WebAPIBOTest.java:129)
 
