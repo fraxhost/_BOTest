@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class JsonToYaml {
-    public static String yamlPath (String jsonPath) throws IOException {
+    public static String yamlPath (String jsonPath, String serverInfo) throws IOException {
         String jsonContent = "";
         try {
             File myObj = new File(jsonPath);
@@ -28,15 +28,26 @@ public class JsonToYaml {
 
         String yamlPath = jsonPath.replace("json", "yaml");
         String yamlContent = asYaml(jsonContent);
-        BoTestIO.writeToFile(yamlPath, yamlContent);
+        String yamlContentWithServerInfo = addServerInfo(yamlContent, serverInfo);
+        BoTestIO.writeToFile(yamlPath, yamlContentWithServerInfo);
 
         return yamlPath;
     }
-    public static String asYaml(String jsonString) throws JsonProcessingException, IOException {
+    private static String asYaml(String jsonString) throws JsonProcessingException, IOException {
         // parse JSON
         JsonNode jsonNodeTree = new ObjectMapper().readTree(jsonString);
         // save it as YAML
         String jsonAsYaml = new YAMLMapper().writeValueAsString(jsonNodeTree);
         return jsonAsYaml;
     }
+
+    private static String addServerInfo(String content, String serverInfo) {
+        String serverContent = "servers:\n  - url: \"" + serverInfo + "\"";
+        String modifiedContent = content.replace("---", "---\n" + serverContent);
+
+        return modifiedContent;
+    }
+
+//    servers:
+//            - url: "https://localhost:7166"
 }

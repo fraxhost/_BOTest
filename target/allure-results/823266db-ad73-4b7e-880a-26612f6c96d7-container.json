@@ -1,0 +1,1 @@
+{"uuid":"823266db-ad73-4b7e-880a-26612f6c96d7","name":"GET /api/Category/{id}","children":["834e45be-82ba-417f-9ca6-7c7f853883a6"],"befores":[{"name":"setUp","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1670320510494,"stop":1670320510494}],"afters":[],"links":[],"start":1670320510490,"stop":1670320510549}

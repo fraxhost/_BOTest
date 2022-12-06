@@ -11,6 +11,7 @@ runners\JUnitTestRunner.class
 inputs\RandomStringGenerator.class
 configuration\pojos\Parameter.class
 configuration\pojos\Generator.class
+util\Bot.class
 util\DataType.class
 util\Command.class
 testcases\TestResult.class

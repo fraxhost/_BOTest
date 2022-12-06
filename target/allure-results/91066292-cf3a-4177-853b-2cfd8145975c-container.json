@@ -1,1 +1,0 @@
-{"uuid":"91066292-cf3a-4177-853b-2cfd8145975c","name":"PUT /api/Category","children":["3ef06588-fde9-4173-8ca2-97443bf4ef70"],"befores":[{"name":"setUp","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1670282186993,"stop":1670282186993}],"afters":[],"links":[],"start":1670282186991,"stop":1670282187138}
