@@ -1,21 +1,23 @@
 import javafx.application.Application;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import util.Bot;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 public class Main extends Application {
 
@@ -30,6 +32,7 @@ public class Main extends Application {
         try {
             // title for the stage
             primaryStage.setTitle("BOTest");
+            Scene scene = new Scene(new StackPane(), 1200, 700);
 
             Image botestIcon = new Image(new FileInputStream("src/main/resources/botIcon.png"));
             primaryStage.getIcons().add(botestIcon);
@@ -86,11 +89,32 @@ public class Main extends Application {
             // create an event handler for file button
             EventHandler<ActionEvent> runBotEvent =
                     e -> {
-                        try {
-                            Bot.runBot(specificationFileLocation, textFieldForServer.getText());
-                        } catch (IOException ex) {
-                            throw new RuntimeException(ex);
-                        }
+                        double progress = 0;
+                        Bot bot = new Bot(specificationFileLocation, textFieldForServer.getText());
+                        ProgressBar progressBar = new ProgressBar(progress);
+
+                        bot.valueProperty().addListener(new ChangeListener<Double>() {
+                            @Override
+                            public void changed(ObservableValue<? extends Double> observableValue, Double oldValue, Double newValue) {
+                                progressBar.setProgress(newValue);
+
+                                if (newValue == 1.0) {
+                                    try {
+                                        TimeUnit.SECONDS.sleep(1);
+                                        restart(primaryStage);
+                                    } catch (InterruptedException ex) {
+                                        throw new RuntimeException(ex);
+                                    }
+                                }
+                            }
+                        });
+
+                        Thread th = new Thread(bot);
+                        th.setDaemon(true);
+                        th.start();
+
+                        // As soon as test starts
+                        scene.setRoot(new StackPane(progressBar));
                     };
             runBotButton.setOnAction(runBotEvent);
 
@@ -126,7 +150,7 @@ public class Main extends Application {
             Background bGround = new Background(bImg);
             vbox.setBackground(bGround);
             // create a scene
-            Scene scene = new Scene(vbox, 1200, 700);
+            scene.setRoot(vbox);
             // set the scene
             primaryStage.setScene(scene);
 
@@ -136,5 +160,9 @@ public class Main extends Application {
         catch (Exception e) {
             System.out.println(e.getMessage());
         }
+    }
+
+    private void restart(Stage stage) {
+        start(stage);
     }
 }
