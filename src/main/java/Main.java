@@ -32,7 +32,7 @@ public class Main extends Application {
             // create a File chooser
             FileChooser fil_chooser = new FileChooser();
             fil_chooser.setTitle("Select File");
-            fil_chooser.setInitialDirectory(new File("C:\\Users\\ahmed\\IdeaProjects\\BOTest-GUI\\src\\main\\resources\\open-api-specifications"));
+            fil_chooser.setInitialDirectory(new File("src/main/resources/open-api-specifications"));
 
             // create a specification file label
             Label specificationFileLabel = new Label("No files selected ...");

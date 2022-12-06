@@ -33,7 +33,7 @@ public class Bot {
         System.out.println("##########");
         System.out.println("Specification Loaded...");
         System.out.println("##########");
-        BoTestIO.writeToFile("C:\\Users\\ahmed\\IdeaProjects\\BOTest-GUI\\src\\main\\resources\\intermediary-generated-files\\api-specification\\" +
+        BoTestIO.writeToFile("src/main/resources/intermediary-generated-files/api-specification/" +
                         openApiSpecification.getSpecification().getInfo().getTitle() + ".js",
                 openApiSpecification.getSpecification().toString());
 
@@ -48,7 +48,7 @@ public class Bot {
         System.out.println("##########");
         System.out.println("Test Configuration Generated...");
         System.out.println("##########");
-        BoTestIO.writeToFile("C:\\Users\\ahmed\\IdeaProjects\\BOTest-GUI\\src\\main\\resources\\intermediary-generated-files\\test-configuration\\" +
+        BoTestIO.writeToFile("src/main/resources/intermediary-generated-files/test-configuration/" +
                         openApiSpecification.getSpecification().getInfo().getTitle() + ".js",
                 testConfigurationObject.getTestConfiguration().toString());
 
@@ -64,7 +64,7 @@ public class Bot {
         System.out.println("##########");
         System.out.println("Abstract Test Case Generated...");
         System.out.println("##########");
-        BoTestIO.writeToFile("C:\\Users\\ahmed\\IdeaProjects\\BOTest-GUI\\src\\main\\resources\\intermediary-generated-files\\test-cases\\" +
+        BoTestIO.writeToFile("src/main/resources/intermediary-generated-files/test-cases/" +
                         openApiSpecification.getSpecification().getInfo().getTitle() + ".js",
                 testCases.toString());
 
@@ -74,14 +74,13 @@ public class Bot {
          */
         RestAssuredTestWriter testWriter = new RestAssuredTestWriter(openApiSpecification, testCases);
         String testClass = testWriter.writeTest();
-        BoTestIO.writeToFile("C:\\Users\\ahmed\\IdeaProjects\\BOTest-GUI\\src\\test\\java\\" + testWriter.getClassName() + ".java", testClass);
+        BoTestIO.writeToFile("src/test/java/" + testWriter.getClassName() + ".java", testClass);
 
         System.out.println("##########");
         System.out.println("REST Assured Tests Generated...");
         System.out.println("##########");
-        BoTestIO.writeToFile("C:\\Users\\ahmed\\IdeaProjects\\BOTest-GUI\\src\\main\\resources\\intermediary-generated-files\\test-classes\\" +
-                        openApiSpecification.getSpecification().getInfo().getTitle() + ".js",
-                testClass);
+        BoTestIO.writeToFile("src/main/resources/intermediary-generated-files/test-classes/" +
+                        openApiSpecification.getSpecification().getInfo().getTitle() + ".js", testClass);
 
 
         /**
