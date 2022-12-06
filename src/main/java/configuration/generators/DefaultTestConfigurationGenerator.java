@@ -316,9 +316,6 @@ public class DefaultTestConfigurationGenerator {
         Generator generator = new Generator();
         generator.setValid(true);
 
-        System.out.println("dhuklammmmmmmmmmmmmmmmmmmmmmmmmm--------------------");
-        System.out.println(schema.getType());
-
         /*
           Boolean Generator
          */
@@ -441,16 +438,9 @@ public class DefaultTestConfigurationGenerator {
         }
         // TODO: Complete it
         else if (schema.getType().equals("object")) {
-            System.out.println("ami object generate parameters ae achi.............................");
-
             GenParameter schemaType = new GenParameter();
 
-            System.out.println(schema.getType());
-            System.out.println(schema.getProperties());
-
             if (schema.get$ref() != null) {
-                System.out.println("hoi hoi hoi ............");
-                System.out.println(determineSchemaFromString(schema.get$ref()));
                 schemaType.setName(determineSchemaFromString(schema.get$ref()).toString());
             }
 

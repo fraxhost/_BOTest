@@ -125,37 +125,3 @@ public class RestAssuredTestWriter {
         return testClass.toString();
     }
 }
-
-//    @Test
-//    public void test_t4knrcbvwt2w_v2All() {
-//        String testResultId = "test_t4knrcbvwt2w_v2All";
-//
-//        nominalOrFaultyTestCaseFilter.updateFaultyData(false, true, "none");
-//        statusCode5XXFilter.updateFaultyData(false, true, "none");
-//        csvFilter.setTestResultId(testResultId);
-//        statusCode5XXFilter.setTestResultId(testResultId);
-//        nominalOrFaultyTestCaseFilter.setTestResultId(testResultId);
-//        validationFilter.setTestResultId(testResultId);
-//
-//        try {
-//            Response response = RestAssured
-//                    .given()
-//                    .log().all()
-//                    .queryParam("apikey_2", "ghi")
-//                    .queryParam("apikey_1", "abc")
-//                    .queryParam("fields", "demonym")
-//                    .filter(allureFilter)
-//                    .filter(statusCode5XXFilter)
-//                    .filter(nominalOrFaultyTestCaseFilter)
-//                    .filter(validationFilter)
-//                    .filter(csvFilter)
-//                    .when()
-//                    .get("/v2/all");
-//
-//            response.then().log().all();
-//            System.out.println("Test passed.");
-//        } catch (RuntimeException ex) {
-//            System.err.println(ex.getMessage());
-//            fail(ex.getMessage());
-//        }
-//    }

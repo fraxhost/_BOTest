@@ -1,20 +1,20 @@
 -------------------------------------------------------------------------------
 Test set: WebAPIBOTest
 -------------------------------------------------------------------------------
-Tests run: 10, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 4.461 s <<< FAILURE! - in WebAPIBOTest
-test_vomctv8Mu9e3_null  Time elapsed: 3.565 s
-test_2sF7BTPbXE3p_null  Time elapsed: 0.193 s
-test_J4eGD3wkrQdZ_null  Time elapsed: 0.069 s
-test_6oIAj860xOaW_null  Time elapsed: 0.061 s
-test_ZjFzoOIXHKy0_null  Time elapsed: 0.158 s  <<< FAILURE!
+Tests run: 10, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 5.317 s <<< FAILURE! - in WebAPIBOTest
+test_PlaOltGHVq0e_null  Time elapsed: 4.495 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: Status Code is less than 500 ==> expected: <true> but was: <false>
-	at WebAPIBOTest.test_ZjFzoOIXHKy0_null(WebAPIBOTest.java:80)
+	at WebAPIBOTest.test_PlaOltGHVq0e_null(WebAPIBOTest.java:80)
 
-test_aZ5tytApyoTi_null  Time elapsed: 0.044 s
-test_hwTEJRheCZWX_null  Time elapsed: 0.044 s
-test_S13xGyNA2XGT_null  Time elapsed: 0.036 s
-test_KxI3wIqIqdtz_null  Time elapsed: 0.101 s  <<< FAILURE!
+test_wfUN0BQV0FWX_null  Time elapsed: 0.095 s
+test_4mygbuLViM2B_null  Time elapsed: 0.078 s
+test_Nb3Gu7WeGEJ1_null  Time elapsed: 0.087 s
+test_MlMPcnHKtood_null  Time elapsed: 0.063 s
+test_NyjBn6KaTDuU_null  Time elapsed: 0.064 s
+test_7s6QsQgEeWJE_null  Time elapsed: 0.048 s
+test_rscVWsXCb6UF_null  Time elapsed: 0.037 s
+test_mOBsMJjyt1z8_null  Time elapsed: 0.033 s
+test_3lHqDA95ve6Z_null  Time elapsed: 0.125 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: Status Code is less than 500 ==> expected: <true> but was: <false>
-	at WebAPIBOTest.test_KxI3wIqIqdtz_null(WebAPIBOTest.java:170)
+	at WebAPIBOTest.test_3lHqDA95ve6Z_null(WebAPIBOTest.java:170)
 
-test_J5JtSo3PS8Vv_null  Time elapsed: 0.036 s

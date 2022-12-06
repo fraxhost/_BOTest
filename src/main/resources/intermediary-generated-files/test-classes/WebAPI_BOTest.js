@@ -18,8 +18,8 @@ public class WebAPIBOTest {
 	@Test
 	@Story("/api/Category")
 	@DisplayName("GET /api/Category")
-	public void test_aZ5tytApyoTi_null() {
-		String testResultId = "test_aZ5tytApyoTi_null";
+	public void test_wfUN0BQV0FWX_null() {
+		String testResultId = "test_wfUN0BQV0FWX_null";
 
 		try {
 			Response response = RestAssured
@@ -40,15 +40,15 @@ public class WebAPIBOTest {
 	@Test
 	@Story("/api/Category")
 	@DisplayName("POST /api/Category")
-	public void test_hwTEJRheCZWX_null() {
-		String testResultId = "test_hwTEJRheCZWX_null";
+	public void test_NyjBn6KaTDuU_null() {
+		String testResultId = "test_NyjBn6KaTDuU_null";
 
 		try {
 			Response response = RestAssured
 					.given()
 						.log().all()
 						.contentType(ContentType.JSON)
-						.body("{\"id\": 1803689571,\"name\": \"XXwJld\"}")
+						.body("{\"id\": 787122974,\"name\": \"\"}")
 					.when()
 						.post("/api/Category");
 
@@ -64,15 +64,15 @@ public class WebAPIBOTest {
 	@Test
 	@Story("/api/Category")
 	@DisplayName("PUT /api/Category")
-	public void test_ZjFzoOIXHKy0_null() {
-		String testResultId = "test_ZjFzoOIXHKy0_null";
+	public void test_PlaOltGHVq0e_null() {
+		String testResultId = "test_PlaOltGHVq0e_null";
 
 		try {
 			Response response = RestAssured
 					.given()
 						.log().all()
 						.contentType(ContentType.JSON)
-						.body("{\"id\": -364504519,\"name\": \"BlX\"}")
+						.body("{\"id\": -761225754,\"name\": \"cUNfW\"}")
 					.when()
 						.put("/api/Category");
 
@@ -88,14 +88,14 @@ public class WebAPIBOTest {
 	@Test
 	@Story("/api/Category/{id}")
 	@DisplayName("GET /api/Category/{id}")
-	public void test_vomctv8Mu9e3_null() {
-		String testResultId = "test_vomctv8Mu9e3_null";
+	public void test_Nb3Gu7WeGEJ1_null() {
+		String testResultId = "test_Nb3Gu7WeGEJ1_null";
 
 		try {
 			Response response = RestAssured
 					.given()
 						.log().all()
-						.pathParam("id", "-496989936")
+						.pathParam("id", "-285042010")
 					.when()
 						.get("/api/Category/{id}");
 
@@ -111,8 +111,8 @@ public class WebAPIBOTest {
 	@Test
 	@Story("/api/Pet")
 	@DisplayName("GET /api/Pet")
-	public void test_S13xGyNA2XGT_null() {
-		String testResultId = "test_S13xGyNA2XGT_null";
+	public void test_4mygbuLViM2B_null() {
+		String testResultId = "test_4mygbuLViM2B_null";
 
 		try {
 			Response response = RestAssured
@@ -133,14 +133,14 @@ public class WebAPIBOTest {
 	@Test
 	@Story("/api/Pet/{id}")
 	@DisplayName("GET /api/Pet/{id}")
-	public void test_J4eGD3wkrQdZ_null() {
-		String testResultId = "test_J4eGD3wkrQdZ_null";
+	public void test_7s6QsQgEeWJE_null() {
+		String testResultId = "test_7s6QsQgEeWJE_null";
 
 		try {
 			Response response = RestAssured
 					.given()
 						.log().all()
-						.pathParam("id", "-1545171236")
+						.pathParam("id", "-1012659555")
 					.when()
 						.get("/api/Pet/{id}");
 
@@ -156,8 +156,8 @@ public class WebAPIBOTest {
 	@Test
 	@Story("/api/PhotoUrl")
 	@DisplayName("GET /api/PhotoUrl")
-	public void test_KxI3wIqIqdtz_null() {
-		String testResultId = "test_KxI3wIqIqdtz_null";
+	public void test_3lHqDA95ve6Z_null() {
+		String testResultId = "test_3lHqDA95ve6Z_null";
 
 		try {
 			Response response = RestAssured
@@ -178,15 +178,15 @@ public class WebAPIBOTest {
 	@Test
 	@Story("/api/PhotoUrl")
 	@DisplayName("POST /api/PhotoUrl")
-	public void test_2sF7BTPbXE3p_null() {
-		String testResultId = "test_2sF7BTPbXE3p_null";
+	public void test_MlMPcnHKtood_null() {
+		String testResultId = "test_MlMPcnHKtood_null";
 
 		try {
 			Response response = RestAssured
 					.given()
 						.log().all()
 						.contentType(ContentType.JSON)
-						.body("{\"id\": -1232856273,\"url\": \"PERcR\"}")
+						.body("{\"id\": 870881592,\"url\": \"OC\"}")
 					.when()
 						.post("/api/PhotoUrl");
 
@@ -202,15 +202,15 @@ public class WebAPIBOTest {
 	@Test
 	@Story("/api/PhotoUrl")
 	@DisplayName("PUT /api/PhotoUrl")
-	public void test_J5JtSo3PS8Vv_null() {
-		String testResultId = "test_J5JtSo3PS8Vv_null";
+	public void test_mOBsMJjyt1z8_null() {
+		String testResultId = "test_mOBsMJjyt1z8_null";
 
 		try {
 			Response response = RestAssured
 					.given()
 						.log().all()
 						.contentType(ContentType.JSON)
-						.body("{\"id\": 1654954478,\"url\": \"QP\"}")
+						.body("{\"id\": -232611872,\"url\": \"fEaTaIaHoJ\"}")
 					.when()
 						.put("/api/PhotoUrl");
 
@@ -226,14 +226,14 @@ public class WebAPIBOTest {
 	@Test
 	@Story("/api/PhotoUrl/{id}")
 	@DisplayName("GET /api/PhotoUrl/{id}")
-	public void test_6oIAj860xOaW_null() {
-		String testResultId = "test_6oIAj860xOaW_null";
+	public void test_rscVWsXCb6UF_null() {
+		String testResultId = "test_rscVWsXCb6UF_null";
 
 		try {
 			Response response = RestAssured
 					.given()
 						.log().all()
-						.pathParam("id", "-1304425081")
+						.pathParam("id", "1405259152")
 					.when()
 						.get("/api/PhotoUrl/{id}");
 
