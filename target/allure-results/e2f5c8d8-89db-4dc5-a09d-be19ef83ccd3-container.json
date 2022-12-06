@@ -1,1 +1,0 @@
-{"uuid":"e2f5c8d8-89db-4dc5-a09d-be19ef83ccd3","name":"POST /api/Category","children":["17f8cbb0-078d-445d-9ffc-c4098899ea63"],"befores":[{"name":"setUp","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1670336735829,"stop":1670336735829}],"afters":[],"links":[],"start":1670336735825,"stop":1670336735853}

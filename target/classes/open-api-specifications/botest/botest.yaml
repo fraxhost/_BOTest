@@ -1,6 +1,6 @@
 ---
 servers:
-  - url: ""
+  - url: "https://localhost:7166"
 openapi: "3.0.1"
 info:
   title: "WebAPI_BOTest"

@@ -1,44 +1,20 @@
 -------------------------------------------------------------------------------
 Test set: WebAPIBOTest
 -------------------------------------------------------------------------------
-Tests run: 10, Failures: 7, Errors: 3, Skipped: 0, Time elapsed: 3.652 s <<< FAILURE! - in WebAPIBOTest
-test_lNgOYqBnDefc_null  Time elapsed: 3.234 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: Target host is null
-	at WebAPIBOTest.test_lNgOYqBnDefc_null(WebAPIBOTest.java:174)
+Tests run: 10, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 5.317 s <<< FAILURE! - in WebAPIBOTest
+test_PlaOltGHVq0e_null  Time elapsed: 4.495 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Status Code is less than 500 ==> expected: <true> but was: <false>
+	at WebAPIBOTest.test_PlaOltGHVq0e_null(WebAPIBOTest.java:80)
 
-test_6LshWKeDbjai_null  Time elapsed: 0.044 s  <<< ERROR!
-java.net.URISyntaxException: Illegal character in path at index 23: null/null/api/PhotoUrl/{id}/null/null/api/PhotoUrl/-1599992815
-	at WebAPIBOTest.test_6LshWKeDbjai_null(WebAPIBOTest.java:238)
-
-test_X5j7RDqatnAT_null  Time elapsed: 0.027 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: Target host is null
-	at WebAPIBOTest.test_X5j7RDqatnAT_null(WebAPIBOTest.java:36)
-
-test_x1g1FKbw6hNl_null  Time elapsed: 0.107 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: Target host is null
-	at WebAPIBOTest.test_x1g1FKbw6hNl_null(WebAPIBOTest.java:198)
-
-test_lngsCuXX0w8C_null  Time elapsed: 0.014 s  <<< ERROR!
-java.net.URISyntaxException: Illegal character in path at index 23: null/null/api/Category/{id}/null/null/api/Category/-276686745
-	at WebAPIBOTest.test_lngsCuXX0w8C_null(WebAPIBOTest.java:100)
-
-test_3JLqKhepVSKm_null  Time elapsed: 0.039 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: Target host is null
-	at WebAPIBOTest.test_3JLqKhepVSKm_null(WebAPIBOTest.java:84)
-
-test_sCBmCrrg3K3F_null  Time elapsed: 0.009 s  <<< ERROR!
-java.net.URISyntaxException: Illegal character in path at index 18: null/null/api/Pet/{id}/null/null/api/Pet/1803558199
-	at WebAPIBOTest.test_sCBmCrrg3K3F_null(WebAPIBOTest.java:145)
-
-test_6JqIlsOCi4U4_null  Time elapsed: 0.029 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: Target host is null
-	at WebAPIBOTest.test_6JqIlsOCi4U4_null(WebAPIBOTest.java:60)
-
-test_rdJCHXUhQZQ9_null  Time elapsed: 0.02 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: Target host is null
-	at WebAPIBOTest.test_rdJCHXUhQZQ9_null(WebAPIBOTest.java:222)
-
-test_lVx5eZB7jUU2_null  Time elapsed: 0.01 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: Target host is null
-	at WebAPIBOTest.test_lVx5eZB7jUU2_null(WebAPIBOTest.java:129)
+test_wfUN0BQV0FWX_null  Time elapsed: 0.095 s
+test_4mygbuLViM2B_null  Time elapsed: 0.078 s
+test_Nb3Gu7WeGEJ1_null  Time elapsed: 0.087 s
+test_MlMPcnHKtood_null  Time elapsed: 0.063 s
+test_NyjBn6KaTDuU_null  Time elapsed: 0.064 s
+test_7s6QsQgEeWJE_null  Time elapsed: 0.048 s
+test_rscVWsXCb6UF_null  Time elapsed: 0.037 s
+test_mOBsMJjyt1z8_null  Time elapsed: 0.033 s
+test_3lHqDA95ve6Z_null  Time elapsed: 0.125 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Status Code is less than 500 ==> expected: <true> but was: <false>
+	at WebAPIBOTest.test_3lHqDA95ve6Z_null(WebAPIBOTest.java:170)
 

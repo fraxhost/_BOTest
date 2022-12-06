@@ -10,7 +10,7 @@ class OpenAPI {
     }
     externalDocs: null
     servers: [class Server {
-        url: null
+        url: https://localhost:7166
         description: null
         variables: null
     }]
