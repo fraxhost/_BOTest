@@ -1,1 +1,0 @@
-{"uuid":"293657a9-86f7-4471-8518-a49f6cb6a7cf","name":"GET /api/PhotoUrl","children":["61b06bb4-9917-4a6b-88f4-183283e635b1"],"befores":[{"name":"setUp","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1670356137989,"stop":1670356137989}],"afters":[],"links":[],"start":1670356137987,"stop":1670356138112}

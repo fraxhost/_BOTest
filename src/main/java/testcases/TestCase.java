@@ -30,7 +30,7 @@ public class TestCase {
     // form-data parameters
     private Map<String, String> formParameters;
     // body parameter
-    private Map<String, String> bodyParameter;
+    private Map<String, Object> bodyParameter;
 
     public String getId() {
         return id;
@@ -128,37 +128,68 @@ public class TestCase {
         this.formParameters = formParameters;
     }
 
-    public Map<String, String> getBodyParameter() {
+    public Map<String, Object> getBodyParameter() {
         return bodyParameter;
     }
 
     public String getBodyParameterAsJson() {
-        StringBuilder sb = new StringBuilder();
-
-        sb.append("{");
-        bodyParameter.forEach((key, value) -> {
-            String name = key.substring(0, key.indexOf(':'));
-            String type = key.substring(key.indexOf(':')+1, key.length());
-
-            if (type.equals("string")) {
-                sb.append("\\\"").append(name).append("\\\"").append(": ").append("\\\"").append(value).append("\\\"");
-            } else {
-                sb.append("\\\"").append(name).append("\\\"").append(": ").append(value);
-            }
-
-            sb.append(",");
-        });
-        sb.setLength(sb.length() - 1); // removing the last unnecessary ,
-        sb.append("}");
-
-        return sb.toString();
+        String sb = recursiveHelperFunction(bodyParameter);
+        sb = sb.stripTrailing();
+        sb = sb.stripLeading();
+        sb = sb.substring(sb.indexOf(":")+1,sb.length()-1);
+        sb = sb.replace("\"", "\\\"");
+        return sb;
     }
 
-//    public Map<String, String> getBodyParameterAsSingleObject() {
-//        return bodyParameter;
+    private String recursiveHelperFunction(Map<String, Object> map) {
+        StringBuilder temp = new StringBuilder("{");
+        for (var entry : map.entrySet()) {
+            temp.append("\"").append(entry.getKey()).append("\"");
+            temp.append(":");
+            if (entry.getValue() instanceof Map) {
+                temp.append(recursiveHelperFunction((Map<String, Object>) entry.getValue()));
+            } else {
+                temp.append(entry.getValue());
+            }
+            temp.append(",");
+        }
+        temp.setLength(temp.length()-1);
+        temp.append("}");
+        return temp.toString();
+    }
+
+//    public String getBodyParameterAsJson() {
+//        StringBuilder sb = new StringBuilder();
+//
+//        System.err.println(221);
+//
+//        sb.append("{");
+//        bodyParameter.forEach((key, value) -> {
+//            System.err.println(key);
+//            System.err.println(value);
+//
+//            String name = key.substring(0, key.indexOf(':'));
+//            String type = key.substring(key.indexOf(':')+1, key.length());
+//
+//            if (type.equals("string")) {
+//                sb.append("\\\"").append(name).append("\\\"").append(": ").append("\\\"").append(value).append("\\\"");
+//            } else {
+//                sb.append("\\\"").append(name).append("\\\"").append(": ").append(value);
+//            }
+//
+//            sb.append(",");
+//        });
+//        sb.setLength(sb.length() - 1); // removing the last unnecessary ,
+//        sb.append("}");
+//
+//        System.err.println(222);
+//
+//        return sb.toString();
 //    }
 
-    public void setBodyParameter(Map<String, String> bodyParameter) {
+
+
+    public void setBodyParameter(Map<String, Object> bodyParameter) {
         this.bodyParameter = bodyParameter;
     }
 
