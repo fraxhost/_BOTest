@@ -18,8 +18,8 @@ public class WebAPIBOTest {
 	@Test
 	@Story("/api/Category")
 	@DisplayName("GET /api/Category")
-	public void test_KqKcObjdCO4d_null() {
-		String testResultId = "test_KqKcObjdCO4d_null";
+	public void test_vre7LOghcJYW_null() {
+		String testResultId = "test_vre7LOghcJYW_null";
 
 		try {
 			Response response = RestAssured
@@ -40,15 +40,15 @@ public class WebAPIBOTest {
 	@Test
 	@Story("/api/Category")
 	@DisplayName("POST /api/Category")
-	public void test_kpyssCvFssbQ_null() {
-		String testResultId = "test_kpyssCvFssbQ_null";
+	public void test_fcv6OQY0AS96_null() {
+		String testResultId = "test_fcv6OQY0AS96_null";
 
 		try {
 			Response response = RestAssured
 					.given()
 						.log().all()
 						.contentType(ContentType.JSON)
-						.body("{\"name\":\"jznIHAyrq\",\"id\":-1396306915}")
+						.body("{\"name\":\"bhDsNZzyqO\",\"id\":325885474}")
 					.when()
 						.post("/api/Category");
 
@@ -64,15 +64,15 @@ public class WebAPIBOTest {
 	@Test
 	@Story("/api/Category")
 	@DisplayName("PUT /api/Category")
-	public void test_0x4CYXDDPYAW_null() {
-		String testResultId = "test_0x4CYXDDPYAW_null";
+	public void test_MrFzsp6D1ayN_null() {
+		String testResultId = "test_MrFzsp6D1ayN_null";
 
 		try {
 			Response response = RestAssured
 					.given()
 						.log().all()
 						.contentType(ContentType.JSON)
-						.body("{\"name\":\"\",\"id\":-1828681728}")
+						.body("{\"name\":\"DC\",\"id\":1956645315}")
 					.when()
 						.put("/api/Category");
 
@@ -88,14 +88,14 @@ public class WebAPIBOTest {
 	@Test
 	@Story("/api/Category/{id}")
 	@DisplayName("GET /api/Category/{id}")
-	public void test_jvKLdPnAY2Zg_null() {
-		String testResultId = "test_jvKLdPnAY2Zg_null";
+	public void test_23zWfGlBZLMf_null() {
+		String testResultId = "test_23zWfGlBZLMf_null";
 
 		try {
 			Response response = RestAssured
 					.given()
 						.log().all()
-						.pathParam("id", "-1090380047")
+						.pathParam("id", "-1839035312")
 					.when()
 						.get("/api/Category/{id}");
 
