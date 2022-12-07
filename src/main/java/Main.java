@@ -46,11 +46,11 @@ public class Main extends Application {
             TextField specificationFileLabel = new TextField("No files selected ...");
             specificationFileLabel.setPrefWidth(200);
             // create a server info label
-            Label serverInfo = new Label("Server Information");
+            Label serverInfo = new Label("Base URI");
 
             // create a text field
             TextField textFieldForServer = new TextField();
-            textFieldForServer.setText("https://localhost:5001");
+            textFieldForServer.setText("https://localhost:7166");
 
             // create a file button
             Button specificationFileButton = new Button("Select File");
