@@ -1,7 +1,8 @@
 package testcases.generators;
 
-import configuration.pojos.Operation;
-import configuration.pojos.Parameter;
+import configuration.pojos.TestBodyParameter;
+import configuration.pojos.TestOperation;
+import configuration.pojos.TestParameter;
 import configuration.pojos.TestConfigurationObject;
 import inputs.RandomBooleanGenerator;
 import inputs.RandomNumberGenerator;
@@ -11,10 +12,7 @@ import specification.OpenApiSpecification;
 import testcases.TestCase;
 import util.DataType;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class AbstractTestCaseGenerator {
     private OpenApiSpecification openApiSpecification;
@@ -28,36 +26,31 @@ public class AbstractTestCaseGenerator {
     public List<TestCase> generateTestCases() {
         List<TestCase> testCases = new ArrayList<>();
 
-        for (Operation operation : testConfigurationObject.getTestConfiguration().getOperations()) {
+        System.err.println(501);
+
+        for (TestOperation operation : testConfigurationObject.getTestConfiguration().getOperations()) {
             TestCase testCase = new TestCase();
 
-            /*
-              Set Id
-             */
+            System.err.println(502);
+
+            // Set Id
             String randomStringForTestCaseId = new RandomStringGenerator(12,12,true, true, false)
                     .nextValue();
             String testId = "test_" + randomStringForTestCaseId + "_" + operation.getOperationId();
             testCase.setId(testId);
 
-            /*
-              Set Faulty
-              No faulty since mutation has not been implemented yet
-             */
+            // Set Faulty. No faulty since mutation has not been implemented yet.
             testCase.setFaulty(false);
 
-            /*
-              Set Faulty Reason
-             */
+            // Set Faulty Reason
             testCase.setFaultyReason("none");
 
-            /*
-              Set Operation Id
-             */
+            // Set Operation Id
             testCase.setOperationId(operation.getOperationId());
 
-            /*
-              Set Method
-             */
+            System.err.println(503);
+
+            // Set Method
             switch (operation.getMethod()) {
                 case "DELETE":
                     testCase.setMethod(PathItem.HttpMethod.DELETE);
@@ -85,45 +78,39 @@ public class AbstractTestCaseGenerator {
                     break;
             }
 
-            /*
-              Set Path
-             */
+            // Set Path
             testCase.setPath(operation.getTestPath());
 
-            /*
-              Set Input Format
-             */
-            // testCase.setInputFormat(operation.);
-            // operation.getRequestBody().getContent().keySet().stream().findFirst().get()
-            // TODO: Make it dynamic (xml/json)
+            // Set Input Format
             testCase.setInputFormat("application/json");
 
-            /*
-              Set Output Format
-             */
-            // testCase.setOutputFormat();
-            // TODO: Make it dynamic (xml/json)
+            // Set Output Format
             testCase.setInputFormat("application/json");
 
-            /*
-              Set Body Parameters
-             */
-            for (Parameter bodyParameter: operation.getBodyParameters()) {
-                // TODO: Make an object and insert all body params into it
-                //System.err.println(bodyParameter);
+            System.err.println(504);
 
-                generateParameterForAbstractTestCase(testCase, bodyParameter);
-            }
-
-            /*
-              Set Test Parameters
-             */
-            for (Parameter testParameter :operation.getTestParameters()) {
+            // Set Test Parameters
+            for (TestParameter testParameter :operation.getTestParameters()) {
                 // TODO: Remove later
-                String generatorType = testParameter.getGenerators().get(0).getType();
+                String generatorType = testParameter.getGenerators().getType();
                 if (generatorType == null) continue;
 
-                generateParameterForAbstractTestCase(testCase, testParameter);
+                System.err.println(505);
+
+                generateGeneralParameterForAbstractTestCase(testCase, testParameter);
+            }
+
+            System.err.println(506);
+
+            // Set Body Parameters
+            if (Objects.nonNull(operation.getBodyParameter())) {
+                System.err.println(507);
+
+                Map<String, Object> bodyParameterForAbstractTestCase = new HashMap<>();
+                generateBodyParameterForAbstractTestCase(operation.getBodyParameter(), bodyParameterForAbstractTestCase);
+                testCase.setBodyParameter(bodyParameterForAbstractTestCase);
+
+                System.err.println(508);
             }
 
             testCases.add(testCase);
@@ -132,13 +119,15 @@ public class AbstractTestCaseGenerator {
         return testCases;
     }
 
-    private void generateParameterForAbstractTestCase (TestCase testCase, Parameter parameter) {
-        String generatorType = parameter.getGenerators().get(0).getType();
+    private void generateGeneralParameterForAbstractTestCase(TestCase testCase, TestParameter parameter) {
+        String generatorType = parameter.getGenerators().getType();
         String parameterType = parameter.getIn();
 
         String randomString = null;
         String randomBoolean = null;
         String randomNumber = null;
+
+        System.err.println(509);
 
         switch (generatorType) {
             case "RandomBooleanGenerator":
@@ -165,9 +154,7 @@ public class AbstractTestCaseGenerator {
         }
 
         switch (parameterType) {
-            /*
-              Set Query Parameters
-             */
+            // Set Query Parameters
             case "query":
                 Map<String, String> queryParameter;
 
@@ -188,9 +175,7 @@ public class AbstractTestCaseGenerator {
                 testCase.setQueryParameters(queryParameter);
 
                 break;
-            /*
-             * Set Path Parameters
-             */
+            // Set Path Parameters
             case "path":
                 Map<String, String> pathParameter;
 
@@ -211,9 +196,7 @@ public class AbstractTestCaseGenerator {
                 testCase.setPathParameters(pathParameter);
 
                 break;
-            /*
-             * Set Header Parameters
-             */
+            // Set Header Parameters
             case "header":
                 Map<String, String> headerParameter;
 
@@ -234,9 +217,7 @@ public class AbstractTestCaseGenerator {
                 testCase.setPathParameters(headerParameter);
 
                 break;
-            /*
-             * Set Form Parameters
-             */
+            // Set Form Parameters
             case "form":
                 Map<String, String> formParameter;
 
@@ -257,28 +238,73 @@ public class AbstractTestCaseGenerator {
                 testCase.setFormParameters(formParameter);
 
                 break;
-            /*
-             * Set Body Parameters
-             */
-            case "body":
-                Map<String, String> bodyParameter;
+            // Set Body Parameters
+//            case "body":
+//                Map<String, String> bodyParameter;
+//
+//                if (testCase.getBodyParameter() != null) {
+//                    bodyParameter = testCase.getBodyParameter();
+//                } else {
+//                    bodyParameter = new HashMap<>();
+//                }
+//
+//                if (randomNumber != null) {
+//                    bodyParameter.put(parameterName, randomNumber);
+//                } else if (randomBoolean != null) {
+//                    bodyParameter.put(parameterName, randomBoolean);
+//                } else if (randomString != null) {
+//                    bodyParameter.put(parameterName, randomString);
+//                }
+//
+//                testCase.setBodyParameter(bodyParameter);
+//
+//                break;
+        }
+    }
 
-                if (testCase.getBodyParameter() != null) {
-                    bodyParameter = testCase.getBodyParameter();
-                } else {
-                    bodyParameter = new HashMap<>();
+    private void generateBodyParameterForAbstractTestCase(TestBodyParameter testBodyParameter, Map<String, Object> bodyParameterForAbstractTestCase) {
+        System.err.println(533);
+        System.err.println(testBodyParameter);
+        if (testBodyParameter == null) return;
+
+        String generatorType = testBodyParameter.getGenerator().getType();
+
+        System.err.println(530);
+        System.err.println(generatorType);
+        System.err.println(520);
+
+        if (generatorType == null) return;
+
+        switch (generatorType) {
+            case "RandomBooleanGenerator":
+                // TODO: use gen parameters to customize random boolean
+                System.err.println(524);
+                String randomBoolean = new RandomBooleanGenerator().nextValueAsString();
+                String booleanKey = testBodyParameter.getName();
+                bodyParameterForAbstractTestCase.put(booleanKey, randomBoolean);
+                break;
+            case "RandomNumberGenerator":
+                // TODO: use gen parameters to customize random number
+                System.err.println(523);
+                String randomNumber = new RandomNumberGenerator(DataType.INTEGER).nextValueAsString();
+                String integerKey = testBodyParameter.getName();
+                bodyParameterForAbstractTestCase.put(integerKey, randomNumber);
+                break;
+            case "RandomStringGenerator":
+                // TODO: use gen parameters to customize random number
+                System.err.println(522);
+                String randomString = new RandomStringGenerator().nextValueAsString();
+                String stringKey = testBodyParameter.getName();
+                bodyParameterForAbstractTestCase.put(stringKey, "\"" + randomString + "\"");
+                break;
+            case "RandomObjectGenerator":
+                Map<String, Object> bodyParameterPropertyForAbstractTestCase = new HashMap<>();
+                System.err.println(526);
+                for (var property: testBodyParameter.getProperties()) {
+                    System.err.println(521);
+                    generateBodyParameterForAbstractTestCase(property, bodyParameterPropertyForAbstractTestCase);
                 }
-
-                if (randomNumber != null) {
-                    bodyParameter.put(parameterName, randomNumber);
-                } else if (randomBoolean != null) {
-                    bodyParameter.put(parameterName, randomBoolean);
-                } else if (randomString != null) {
-                    bodyParameter.put(parameterName, randomString);
-                }
-
-                testCase.setBodyParameter(bodyParameter);
-
+                bodyParameterForAbstractTestCase.put(testBodyParameter.getName(), bodyParameterPropertyForAbstractTestCase);
                 break;
         }
     }

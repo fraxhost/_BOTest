@@ -50,6 +50,7 @@ public class Main extends Application {
 
             // create a text field
             TextField textFieldForServer = new TextField();
+            textFieldForServer.setText("https://localhost:5001");
 
             // create a file button
             Button specificationFileButton = new Button("Select File");

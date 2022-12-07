@@ -1,5 +1,5 @@
 [TestCase{
-	id='test_5PwMVr0ENYed_null', 
+	id='test_KqKcObjdCO4d_null', 
 	faulty=false, 
 	faultyReason='none', 
 	operationId='null', 
@@ -13,7 +13,7 @@
 	formParameters=null, 
 	bodyParameter='null'
 }, TestCase{
-	id='test_CzhGU3PvawuD_null', 
+	id='test_kpyssCvFssbQ_null', 
 	faulty=false, 
 	faultyReason='none', 
 	operationId='null', 
@@ -25,9 +25,9 @@
 	pathParameters=null, 
 	queryParameters=null, 
 	formParameters=null, 
-	bodyParameter='{id:number=1969491915, name:string=Ib}'
+	bodyParameter='{Category={name="jznIHAyrq", id=-1396306915}}'
 }, TestCase{
-	id='test_HvTw0LjNIyQG_null', 
+	id='test_0x4CYXDDPYAW_null', 
 	faulty=false, 
 	faultyReason='none', 
 	operationId='null', 
@@ -39,9 +39,9 @@
 	pathParameters=null, 
 	queryParameters=null, 
 	formParameters=null, 
-	bodyParameter='{id:number=1992596158, name:string=shzTGRuEY}'
+	bodyParameter='{Category={name="", id=-1828681728}}'
 }, TestCase{
-	id='test_cL04Nz7eWV06_null', 
+	id='test_jvKLdPnAY2Zg_null', 
 	faulty=false, 
 	faultyReason='none', 
 	operationId='null', 
@@ -50,91 +50,7 @@
 	inputFormat='application/json', 
 	outputFormat='null', 
 	headerParameters=null, 
-	pathParameters={id:number=984123674}, 
-	queryParameters=null, 
-	formParameters=null, 
-	bodyParameter='null'
-}, TestCase{
-	id='test_mizZ8pCrIMcK_null', 
-	faulty=false, 
-	faultyReason='none', 
-	operationId='null', 
-	method=GET, 
-	path='/api/Pet', 
-	inputFormat='application/json', 
-	outputFormat='null', 
-	headerParameters=null, 
-	pathParameters=null, 
-	queryParameters=null, 
-	formParameters=null, 
-	bodyParameter='null'
-}, TestCase{
-	id='test_UChlMd8gAHcC_null', 
-	faulty=false, 
-	faultyReason='none', 
-	operationId='null', 
-	method=GET, 
-	path='/api/Pet/{id}', 
-	inputFormat='application/json', 
-	outputFormat='null', 
-	headerParameters=null, 
-	pathParameters={id:number=174497454}, 
-	queryParameters=null, 
-	formParameters=null, 
-	bodyParameter='null'
-}, TestCase{
-	id='test_cgzSwLG8vPBr_null', 
-	faulty=false, 
-	faultyReason='none', 
-	operationId='null', 
-	method=GET, 
-	path='/api/PhotoUrl', 
-	inputFormat='application/json', 
-	outputFormat='null', 
-	headerParameters=null, 
-	pathParameters=null, 
-	queryParameters=null, 
-	formParameters=null, 
-	bodyParameter='null'
-}, TestCase{
-	id='test_mOUfVOHAnqBq_null', 
-	faulty=false, 
-	faultyReason='none', 
-	operationId='null', 
-	method=POST, 
-	path='/api/PhotoUrl', 
-	inputFormat='application/json', 
-	outputFormat='null', 
-	headerParameters=null, 
-	pathParameters=null, 
-	queryParameters=null, 
-	formParameters=null, 
-	bodyParameter='{id:number=1702927152, url:string=lkBaB}'
-}, TestCase{
-	id='test_fxncNCZZ7cyx_null', 
-	faulty=false, 
-	faultyReason='none', 
-	operationId='null', 
-	method=PUT, 
-	path='/api/PhotoUrl', 
-	inputFormat='application/json', 
-	outputFormat='null', 
-	headerParameters=null, 
-	pathParameters=null, 
-	queryParameters=null, 
-	formParameters=null, 
-	bodyParameter='{id:number=943851671, url:string=jxIEkMT}'
-}, TestCase{
-	id='test_xDZGRIsTw7Rr_null', 
-	faulty=false, 
-	faultyReason='none', 
-	operationId='null', 
-	method=GET, 
-	path='/api/PhotoUrl/{id}', 
-	inputFormat='application/json', 
-	outputFormat='null', 
-	headerParameters=null, 
-	pathParameters={id:number=29400050}, 
+	pathParameters={id:number=-1090380047}, 
 	queryParameters=null, 
 	formParameters=null, 
 	bodyParameter='null'
